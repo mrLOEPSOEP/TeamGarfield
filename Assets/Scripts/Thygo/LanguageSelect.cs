@@ -1,16 +1,18 @@
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LanguageSelect : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    //Functionality of the buttons
+    public void OnEnglishSelected(bool english)
     {
-        
-    }
+        SceneManager.LoadScene("GamemodeSelectionScene");
+    }   
 
-    // Update is called once per frame
-    void Update()
+    public void OnDutchSelected(bool dutch)
     {
-        
-    }
+        SceneManager.LoadScene("GamemodeSelectionScene");
+    } 
 }
