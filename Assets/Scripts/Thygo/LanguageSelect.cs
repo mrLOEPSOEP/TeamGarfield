@@ -5,14 +5,26 @@ using TMPro;
 
 public class LanguageSelect : MonoBehaviour
 {
-    //Functionality of the buttons
-    public void OnEnglishSelected(bool english)
+    [SerializeField] GameObject menuManagerObject;
+    MenuManager menuManager;
+
+    //Getting the menu manager on the actual gameobject
+    void Start()
     {
+        menuManager = menuManagerObject.GetComponent<MenuManager>();
+    }
+
+
+    //Functionality of the buttons
+    public void OnEnglishSelected()
+    {
+        menuManager.languageIsDutch = false;
         SceneManager.LoadScene("GamemodeSelectionScene");
     }   
 
-    public void OnDutchSelected(bool dutch)
+    public void OnDutchSelected()
     {
+        menuManager.languageIsDutch = true;
         SceneManager.LoadScene("GamemodeSelectionScene");
     } 
 }
