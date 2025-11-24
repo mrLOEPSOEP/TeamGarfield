@@ -463,6 +463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2a2f24b7e93174583df571f38fe9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuManagerObject: {fileID: 1956226453}
 --- !u!114 &1314186666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1085,6 +1086,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78872ddfa4f977f42a9f76d3d630493b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  languageIsDutch: 0
+  gameModeSelected: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
