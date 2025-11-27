@@ -1,16 +1,34 @@
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEditor;
+using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
-public class GameModeSelect : MonoBehaviour
+public class GameModeSelect : Subject<ButtonType>
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] GameObject menuManagerObject;
+    MenuManager menuManager;
+    int languageSelected;
+
+    //Getting the menu manager on the actual gameobject
     void Start()
     {
-        
+        menuManager = menuManagerObject.GetComponent<MenuManager>();
     }
-
-    // Update is called once per frame
-    void Update()
+    //Functionality of the buttons
+    public void OnGuidanceModeSelected()
     {
-        
+        NotifyObservers(ButtonType.Guidance);
+    }   
+
+    public void OnPracticeModeSelected()
+    {
+        NotifyObservers(ButtonType.Practice);
+    } 
+
+    public void OnChallengeModeSelected()
+    {
+        NotifyObservers(ButtonType.Challenge);
     }
 }
