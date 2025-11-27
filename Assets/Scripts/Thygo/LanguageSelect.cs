@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEditor;
+using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 public class LanguageSelect : Subject<ButtonType>
 {
@@ -21,13 +22,11 @@ public class LanguageSelect : Subject<ButtonType>
     public void OnEnglishSelected()
     {
         NotifyObservers(ButtonType.English);
-        SceneManager.LoadScene(2);
     }   
 
     public void OnDutchSelected()
     {
         NotifyObservers(ButtonType.Dutch);
-        SceneManager.LoadScene(2);
     } 
 
 }

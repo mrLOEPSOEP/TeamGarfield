@@ -3,5 +3,8 @@ using UnityEngine;
 public enum ButtonType
 {
     Dutch,
-    English
+    English,
+    Guidance,
+    Practice,
+    Challenge
 }
