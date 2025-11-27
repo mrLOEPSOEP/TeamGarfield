@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 83753472}
   - component: {fileID: 83753471}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: PracticeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 165024965}
   - component: {fileID: 165024964}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: GuidanceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 988229421}
   - component: {fileID: 988229420}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: AdvancedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

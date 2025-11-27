@@ -831,6 +831,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1593697768}
+  - component: {fileID: 1593697770}
+  - component: {fileID: 1593697769}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -853,6 +855,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1241513052}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1593697769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593697767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d91b6775d7b7e46a33bc34f84c16c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameHelpManager
+--- !u!114 &1593697770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593697767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ade12bdb5406c45a64628db0c4a402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
 --- !u!1 &1662117919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,9 +1189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78872ddfa4f977f42a9f76d3d630493b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  languageIsDutch: 0
-  gameModeSelected: 0
   languageSubject: {fileID: 1314186665}
+  gamemodeSelectScreen: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -14,7 +14,6 @@ public class LanguageSelect : Subject<ButtonType>
     void Start()
     {
         menuManager = menuManagerObject.GetComponent<MenuManager>();
-        //Testing notifyobservers on gamestart
     }
 
 
@@ -22,13 +21,12 @@ public class LanguageSelect : Subject<ButtonType>
     public void OnEnglishSelected()
     {
         NotifyObservers(ButtonType.English);
-        menuManager.languageIsDutch = false;
         SceneManager.LoadScene(2);
     }   
 
     public void OnDutchSelected()
     {
-        menuManager.languageIsDutch = true;
+        NotifyObservers(ButtonType.Dutch);
         SceneManager.LoadScene(2);
     } 
 
