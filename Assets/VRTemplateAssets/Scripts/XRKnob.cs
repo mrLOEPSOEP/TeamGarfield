@@ -10,7 +10,7 @@ namespace Unity.VRTemplate
     /// <summary>
     /// An interactable knob that follows the rotation of the interactor
     /// </summary>
-    public class XRKnob : XRBaseInteractable
+    public class XRKnob : XRSubject<AxisData>
     {
         const float k_ModeSwitchDeadZone = 0.1f; // Prevents rapid switching between the different rotation tracking modes
 
@@ -128,6 +128,10 @@ namespace Unity.VRTemplate
 
         IXRSelectInteractor m_Interactor;
 
+        //my code
+        float xAxisMove = 7;
+        float zAxisMove = 12;
+
         bool m_PositionDriven = false;
         bool m_UpVectorDriven = false;
 
@@ -204,6 +208,8 @@ namespace Unity.VRTemplate
         {
             SetValue(m_Value);
             SetKnobRotation(ValueToRotation());
+            AxisData axisData = new AxisData(xAxisMove, zAxisMove);
+            NotifyObservers(axisData);
         }
 
         protected override void OnEnable()
@@ -380,6 +386,12 @@ namespace Unity.VRTemplate
         void UpdateBaseKnobRotation()
         {
             m_BaseKnobRotation = Mathf.LerpUnclamped(m_MinAngle, m_MaxAngle, m_Value);
+        }
+
+        //Thygo code
+        void Update()
+        {
+            Debug.Log(m_BaseKnobRotation);
         }
 
         static float ShortestAngleDistance(float start, float end, float max)
