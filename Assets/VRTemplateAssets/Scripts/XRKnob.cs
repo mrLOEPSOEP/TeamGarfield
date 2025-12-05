@@ -343,11 +343,12 @@ namespace Unity.VRTemplate
                 knobRotation = Mathf.Clamp(knobRotation, m_MinAngle, m_MaxAngle);
 
             SetKnobRotation(knobRotation);
-
+            
             // Reverse to get value
             var knobValue = (knobRotation - m_MinAngle) / (m_MaxAngle - m_MinAngle);
             SetValue(knobValue);
         }
+        
 
         void SetKnobRotation(float angle)
         {
@@ -388,11 +389,13 @@ namespace Unity.VRTemplate
             m_BaseKnobRotation = Mathf.LerpUnclamped(m_MinAngle, m_MaxAngle, m_Value);
         }
 
+        #region  added Thygo
         //Thygo code
         void Update()
         {
             Debug.Log(m_BaseKnobRotation);
         }
+        #endregion
 
         static float ShortestAngleDistance(float start, float end, float max)
         {
