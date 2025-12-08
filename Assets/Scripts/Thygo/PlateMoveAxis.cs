@@ -17,8 +17,8 @@ public class PlateMoveAxis : MonoBehaviour, IAmObserver<AxisData>
     }
     public void OnNotify(AxisData axisData)
     {
-        platePosition.x += axisData.xAxis;
-        platePosition.z += axisData.zAxis;
+        platePosition.x += axisData.axisRotateValue;
+        
     }
 
     void OnEnable()

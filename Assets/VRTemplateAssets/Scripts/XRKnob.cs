@@ -128,9 +128,7 @@ namespace Unity.VRTemplate
 
         IXRSelectInteractor m_Interactor;
 
-        //my code
-        float xAxisMove = 7;
-        float zAxisMove = 12;
+        
 
         bool m_PositionDriven = false;
         bool m_UpVectorDriven = false;
@@ -208,7 +206,7 @@ namespace Unity.VRTemplate
         {
             SetValue(m_Value);
             SetKnobRotation(ValueToRotation());
-            AxisData axisData = new AxisData(xAxisMove, zAxisMove);
+            AxisData axisData = new AxisData();
             NotifyObservers(axisData);
         }
 
@@ -377,6 +375,8 @@ namespace Unity.VRTemplate
 
             m_Value = newValue;
             m_OnValueChange.Invoke(m_Value);
+
+            
         }
 
         float ValueToRotation()
@@ -391,9 +391,11 @@ namespace Unity.VRTemplate
 
         #region  added Thygo
         //Thygo code
+        //m_Value is the rotation value 
+        //m_OnValueChange is the event called when the knob gets rotated
         void Update()
         {
-            Debug.Log(m_BaseKnobRotation);
+            Debug.Log(value);
         }
         #endregion
 
