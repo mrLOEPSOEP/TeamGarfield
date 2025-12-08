@@ -1,13 +1,6 @@
 using UnityEngine;
 
-public struct AxisData 
+public class AxisData 
 {
-    public float xAxis;
-    public float zAxis;
-
-    public AxisData(float x, float z)
-    {
-        xAxis = x;
-        zAxis = z;
-    }
+    public float axisRotateValue;
 }
