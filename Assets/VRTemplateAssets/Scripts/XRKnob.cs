@@ -207,7 +207,7 @@ namespace Unity.VRTemplate
             SetValue(m_Value);
             SetKnobRotation(ValueToRotation());
             AxisData axisData = new AxisData();
-            NotifyObservers(axisData);
+            NotifyObservers(this, axisData);
         }
 
         protected override void OnEnable()
@@ -376,7 +376,15 @@ namespace Unity.VRTemplate
             m_Value = newValue;
             m_OnValueChange.Invoke(m_Value);
 
-            
+            //Thygo added code
+            AxisData dataToSend = new AxisData
+            {
+                axisRotateValue = m_Value  
+            };
+
+            NotifyObservers(this, dataToSend);
+            Debug.Log("XRKnob sends the following data: "+ m_Value);
+            //End of added code here
         }
 
         float ValueToRotation()
@@ -388,16 +396,6 @@ namespace Unity.VRTemplate
         {
             m_BaseKnobRotation = Mathf.LerpUnclamped(m_MinAngle, m_MaxAngle, m_Value);
         }
-
-        #region  added Thygo
-        //Thygo code
-        //m_Value is the rotation value 
-        //m_OnValueChange is the event called when the knob gets rotated
-        void Update()
-        {
-            Debug.Log(value);
-        }
-        #endregion
 
         static float ShortestAngleDistance(float start, float end, float max)
         {
