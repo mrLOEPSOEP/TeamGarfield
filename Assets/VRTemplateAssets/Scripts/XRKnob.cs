@@ -206,8 +206,6 @@ namespace Unity.VRTemplate
         {
             SetValue(m_Value);
             SetKnobRotation(ValueToRotation());
-            AxisData axisData = new AxisData();
-            NotifyObservers(this, axisData);
         }
 
         protected override void OnEnable()
@@ -376,6 +374,7 @@ namespace Unity.VRTemplate
             m_Value = newValue;
             m_OnValueChange.Invoke(m_Value);
 
+            #region Thygo added code
             //Thygo added code
             AxisData dataToSend = new AxisData
             {
@@ -385,6 +384,7 @@ namespace Unity.VRTemplate
             NotifyObservers(this, dataToSend);
             Debug.Log("XRKnob sends the following data: "+ m_Value);
             //End of added code here
+            #endregion
         }
 
         float ValueToRotation()
