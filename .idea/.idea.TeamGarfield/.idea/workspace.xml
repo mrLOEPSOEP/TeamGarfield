@@ -6,12 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b6106fb1-42b9-4b9f-af51-49233d882f67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamGarfield/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamGarfield/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LGSelectionScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LGSelectionScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/AndroidXR/AndroidXRSettingsInitializer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/AndroidXR/AndroidXRSettingsInitializer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/OpenXRPackageSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/OpenXRPackageSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.learn.iet-framework/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.learn.iet-framework/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.2.1/Hands Interaction Demo/Materials/Unity_Hand_Medium.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.2.1/Hands Interaction Demo/Materials/Unity_Hand_Medium.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThomasTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ThomasTesting.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Thomas/Button.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Thomas/Button.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VRTemplateAssets/Prefabs/Affordance/Affordance Callout.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRTemplateAssets/Prefabs/Affordance/Affordance Callout.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +99,9 @@
       <workItem from="1765061983666" duration="5000" />
       <workItem from="1765192415804" duration="992000" />
       <workItem from="1765199519060" duration="449000" />
-      <workItem from="1765200900635" duration="419000" />
+      <workItem from="1765200900635" duration="1386000" />
+      <workItem from="1765285897304" duration="3267000" />
+      <workItem from="1765462528747" duration="117000" />
     </task>
     <servers />
   </component>
