@@ -38604,6 +38604,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d91b6775d7b7e46a33bc34f84c16c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameHelpManager
+  HelpField1: {fileID: 0}
+  HelpField2: {fileID: 0}
+  HelpField3: {fileID: 0}
+  HelpField4: {fileID: 0}
+  HelpField5: {fileID: 0}
+  HelpField6: {fileID: 0}
+  HelpField7: {fileID: 0}
+  HelpField8: {fileID: 0}
+  HelpField9: {fileID: 0}
 --- !u!114 &1593697770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42535,7 +42544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_StaticEditorFlags
