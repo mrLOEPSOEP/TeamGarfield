@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +22,13 @@ public class PlateMoveAxis : MonoBehaviour, IAmXRObserver<AxisData>
 
     //Valariables
     [Tooltip("Value of change in baseplate")][SerializeField] float scaleValue;
+
+    //For clamping currently unused
+    [Header("Clamping the positions")]
+    [SerializeField] [Range(0, 1)] float clampX = 1;
+    [SerializeField] [Range(0, 1)] float clampY = 1;
+    [SerializeField] [Range(0, 1)] float clampZ = 1;
+    
 
     void Start()
     {
