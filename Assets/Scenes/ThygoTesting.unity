@@ -13065,6 +13065,9 @@ MonoBehaviour:
   crankZ: {fileID: 725859556}
   plate: {fileID: 1766567319}
   scaleValue: 1
+  clampX: 0
+  clampY: 0
+  clampZ: 0
 --- !u!65 &1766567321
 BoxCollider:
   m_ObjectHideFlags: 0
