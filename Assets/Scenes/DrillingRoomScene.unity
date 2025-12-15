@@ -33488,7 +33488,7 @@ GameObject:
   - component: {fileID: 1138753175}
   - component: {fileID: 1138753174}
   m_Layer: 5
-  m_Name: AnvilUI
+  m_Name: MaterialClampUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51522,15 +51522,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d91b6775d7b7e46a33bc34f84c16c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameHelpManager
-  HelpField1: {fileID: 0}
-  HelpField2: {fileID: 0}
-  HelpField3: {fileID: 0}
-  HelpField4: {fileID: 0}
-  HelpField5: {fileID: 0}
-  HelpField6: {fileID: 0}
-  HelpField7: {fileID: 0}
-  HelpField8: {fileID: 0}
-  HelpField9: {fileID: 0}
+  startMachine: {fileID: 1460116402837750271}
+  emergenyStop: {fileID: 2112490517}
+  drillSpeedKnob: {fileID: 1918772222}
+  materialClamp: {fileID: 134159449}
+  shield: {fileID: 117774421}
+  drillBit: {fileID: 0}
+  stopMachine: {fileID: 0}
+  heightCrank: {fileID: 0}
+  leftRightCrank: {fileID: 0}
+  forwardBackCrank: {fileID: 0}
+  startMachineTextEnglish: 
+  emergenyStopTextEnglish: 
+  drillSpeedKnobTextEnglish: 
+  materialClampTextEnglish: 
+  shieldTextEnglish: 
+  drillBitTextEnglish: 
+  stopMachineTextEnglish: 
+  heightCrankTextEnglish: 
+  leftRightCranktextEnglish: 
+  forwardBackCrankTextEnglish: 
+  startMachineTextDutch: 
+  emergenyStopTextDutch: 
+  drillSpeedKnobTextDutch: 
+  materialClampTextDutch: 
+  shieldTextDutch: 
+  drillBitTextDutch: 
+  stopMachineTextDutch: 
+  heightCrankTextDutch: 
+  leftRightCranktextDutch: 
+  forwardBackCrankTextDutch: 
 --- !u!114 &1593697770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68382,7 +68403,7 @@ Transform:
   m_GameObject: {fileID: 4081337295433251268}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.251, y: 0.927, z: -0.904}
+  m_LocalPosition: {x: 1.251, y: 0.927, z: -1.115}
   m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
   m_ConstrainProportionsScale: 0
   m_Children:

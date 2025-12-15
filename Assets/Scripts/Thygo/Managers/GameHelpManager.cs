@@ -8,16 +8,27 @@ public class GameHelpManager : MonoBehaviour, IAmObserver<ButtonType>
     //references to the thing that provides some form of help
     #region Serializables
     [Header("References to the textbox in UI")]
-    [SerializeField] Text startMachineUI;
-    [SerializeField] Text emergenyStopUI;
-    [SerializeField] Text drillSpeedKnobUI;
-    [SerializeField] Text materialClampUI;
-    [SerializeField] Text shieldUI;
-    [SerializeField] Text drillBitUI;
-    [SerializeField] Text stopMachineUI;
-    [SerializeField] Text heightCrankUI;
-    [SerializeField] Text leftRightCrankUI;
-    [SerializeField] Text forwardBackCrankUI;
+    [SerializeField] GameObject startMachine;
+    [SerializeField] GameObject emergenyStop;
+    [SerializeField] GameObject drillSpeedKnob;
+    [SerializeField] GameObject materialClamp;
+    [SerializeField] GameObject shield;
+    [SerializeField] GameObject drillBit;
+    [SerializeField] GameObject stopMachine;
+    [SerializeField] GameObject heightCrank;
+    [SerializeField] GameObject leftRightCrank;
+    [SerializeField] GameObject forwardBackCrank;
+
+    TextMeshPro startMachineUI;
+    TextMeshPro emergenyStopUI;
+    TextMeshPro drillSpeedKnobUI;
+    TextMeshPro materialClampUI;
+    TextMeshPro shieldUI;
+    TextMeshPro drillBitUI;
+    TextMeshPro stopMachineUI;
+    TextMeshPro heightCrankUI;
+    TextMeshPro leftRightCrankUI;
+    TextMeshPro forwardBackCrankUI;
 
     [Header("UI text English")]
     [SerializeField] string startMachineTextEnglish;
