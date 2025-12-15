@@ -3,7 +3,7 @@ using UnityEngine;
 public interface IAmObserver<T>
 {
     //Subject uses this method to communicate with the observer
-    void OnNotify(T value)
+    public void OnNotify(T value)
     {
         
     }
