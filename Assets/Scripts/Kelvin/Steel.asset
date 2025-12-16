@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 207f825a95f346845ae4637fbc149a85, type: 3}
-  m_Name: MaterialType
+  m_Name: Steel
   m_EditorClassIdentifier: Assembly-CSharp::MaterialType
-  MaterialName: Steel
+  materialName: Steel
+  maxSpeed: 1000

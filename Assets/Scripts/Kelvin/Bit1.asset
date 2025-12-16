@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 207f825a95f346845ae4637fbc149a85, type: 3}
-  m_Name: Copper
-  m_EditorClassIdentifier: Assembly-CSharp::MaterialType
-  materialName: Copper
-  maxSpeed: 2000
+  m_Script: {fileID: 11500000, guid: 2d8405ae04adff746826a8990dfbd667, type: 3}
+  m_Name: Bit1
+  m_EditorClassIdentifier: Assembly-CSharp::DrillBitSpecs
+  bitName: Bit1
+  bitWidth: 1
+  maxSpeed: 1
+  bitHeight: 1
+  bitHardness: 1

@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b6106fb1-42b9-4b9f-af51-49233d882f67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamGarfield/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamGarfield/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kelvin/Copper.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Kelvin/Copper.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kelvin/MaterialType.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kelvin/MaterialType.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kelvin/MaterialType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Kelvin/MaterialType.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +21,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/LGSelectionScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Kelvin/Copper.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Kelvin/DrillBitSpecs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Kelvin/Steel.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/test.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -49,10 +55,9 @@
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\terra\Documents\GitHub\TeamGarfield -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\terra\Documents\GitHub\TeamGarfield" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
@@ -60,10 +65,9 @@
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\terra\Documents\GitHub\TeamGarfield -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\terra\Documents\GitHub\TeamGarfield" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -115,6 +119,7 @@
       <workItem from="1765462528747" duration="117000" />
       <workItem from="1765912642007" duration="60000" />
       <workItem from="1765912760672" duration="433000" />
+      <workItem from="1765916841026" duration="2474000" />
     </task>
     <servers />
   </component>
