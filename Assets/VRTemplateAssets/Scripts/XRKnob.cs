@@ -127,7 +127,6 @@ namespace Unity.VRTemplate
         ValueChangeEvent m_OnValueChange = new ValueChangeEvent();
 
         IXRSelectInteractor m_Interactor;
-
         
 
         bool m_PositionDriven = false;
