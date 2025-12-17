@@ -8,13 +8,13 @@ using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 public class LanguageSelect : Subject<ButtonType>
 {
     [SerializeField] GameObject menuManagerObject;
-    MenuManager menuManager;
-    int languageSelected;
+    [SerializeField] GameObject gameModeCanvas;
+    
 
-    //Getting the menu manager on the actual gameobject
+    //Getting the gameModeSelection canvas and making sure it doesn't show up before we selected a language
     void Start()
     {
-        menuManager = menuManagerObject.GetComponent<MenuManager>();
+        gameModeCanvas.SetActive(false);
     }
 
 
@@ -22,11 +22,15 @@ public class LanguageSelect : Subject<ButtonType>
     public void OnEnglishSelected()
     {
         NotifyObservers(ButtonType.English);
+        gameObject.SetActive(false);
+        gameModeCanvas.SetActive(true);
     }   
 
     public void OnDutchSelected()
     {
         NotifyObservers(ButtonType.Dutch);
+        gameObject.SetActive(false);
+        gameModeCanvas.SetActive(true);
     } 
 
 }
