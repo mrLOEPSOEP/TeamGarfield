@@ -30,19 +30,13 @@ public class PlateMoveAxis : MonoBehaviour, IAmXRObserver<AxisData>
     [SerializeField] [Range(0, 1)] float clampZ = 1;
     
 
-    void Start()
-    {
-        platePosition = plate.transform.position;
-        crankX.AddObserver(this);
-        crankY.AddObserver(this);
-        crankZ.AddObserver(this);
-    }
 
     public void OnNotify(XRSubject<AxisData> sender, AxisData axisData)
     {
         float currentCrankValue = axisData.axisRotateValue;
         float lastCrankValue;
         bool isFirstNotification = false; //A flag so position won't be updated at the start of the game
+        platePosition = plate.transform.localPosition;
 
         //if there is no value in the dictionary set initial value to the current value makes sure starting delta = 0
         if (!lastCrankValues.TryGetValue(sender, out lastCrankValue))
@@ -89,17 +83,17 @@ public class PlateMoveAxis : MonoBehaviour, IAmXRObserver<AxisData>
     void OnEnable()
     {
         //Subscribes to the subjects list of observers
-        crankX.AddObserver(this);
-        crankY.AddObserver(this);
-        crankZ.AddObserver(this);
+        if (crankX != null) crankX.AddObserver(this);
+        if (crankY != null) crankY.AddObserver(this);
+        if (crankZ != null) crankZ.AddObserver(this);
     }
 
     
     void OnDisable()
     {
         //Removes itself from the subjects list of observers
-        crankX.RemoveObserver(this); 
-        crankY.RemoveObserver(this);
-        crankZ.RemoveObserver(this);       
+        if (crankX != null) crankX.RemoveObserver(this); 
+        if (crankY != null) crankY.RemoveObserver(this);
+        if (crankZ != null) crankZ.RemoveObserver(this);       
     }
 }
