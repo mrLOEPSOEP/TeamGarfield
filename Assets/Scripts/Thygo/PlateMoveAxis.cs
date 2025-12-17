@@ -33,6 +33,9 @@ public class PlateMoveAxis : MonoBehaviour, IAmXRObserver<AxisData>
     void Start()
     {
         platePosition = plate.transform.position;
+        crankX.AddObserver(this);
+        crankY.AddObserver(this);
+        crankZ.AddObserver(this);
     }
 
     public void OnNotify(XRSubject<AxisData> sender, AxisData axisData)
@@ -71,14 +74,16 @@ public class PlateMoveAxis : MonoBehaviour, IAmXRObserver<AxisData>
         }
         else if (sender == crankY)
         {
+            Debug.Log("Crank y notified");
             platePosition.y += scaledDelta; 
         }
         else if (sender == crankZ)
         {
+            Debug.Log("Crank z notified");
             platePosition.z += scaledDelta;
         }
         
-        plate.transform.position = platePosition;
+        plate.transform.localPosition = platePosition;
     }
 
     void OnEnable()

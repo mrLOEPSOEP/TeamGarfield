@@ -381,7 +381,7 @@ namespace Unity.VRTemplate
             };
 
             NotifyObservers(this, dataToSend);
-            Debug.Log("XRKnob sends the following data: "+ m_Value);
+            //Debug.Log("XRKnob sends the following data: "+ m_Value);
             //End of added code here
             #endregion
         }
