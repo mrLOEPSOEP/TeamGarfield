@@ -37239,6 +37239,11 @@ Transform:
   - {fileID: 2970450325364609592}
   m_Father: {fileID: 1180349855}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1403854800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4704240698125147205, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
+  m_PrefabInstance: {fileID: 501949933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1403986126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43689,7 +43694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d91b6775d7b7e46a33bc34f84c16c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameHelpManager
-  startMachine: {fileID: 0}
+  startMachine: {fileID: 1403854800}
   emergenyStop: {fileID: 0}
   drillSpeedKnob: {fileID: 0}
   materialClamp: {fileID: 0}
@@ -43699,7 +43704,7 @@ MonoBehaviour:
   heightCrank: {fileID: 0}
   leftRightCrank: {fileID: 0}
   forwardBackCrank: {fileID: 0}
-  startMachineTextEnglish: 
+  startMachineTextEnglish: gedie deda ge die adighaoinfd
   emergenyStopTextEnglish: 
   drillSpeedKnobTextEnglish: 
   materialClampTextEnglish: 

@@ -60,6 +60,16 @@ public class GameHelpManager : MonoBehaviour, IAmObserver<ButtonType>
     void Start()
     {
         SetUITextEnglish();
+        if (startMachine != null)startMachineUI =     startMachine.GetComponent<TextMeshPro>();
+        if (emergenyStop != null)emergenyStopUI  =    emergenyStop.GetComponent<TextMeshPro>();
+        if (drillSpeedKnob != null)drillSpeedKnobUI =   drillSpeedKnob.GetComponent<TextMeshPro>();
+        if (materialClamp != null)materialClampUI =    materialClamp.GetComponent<TextMeshPro>();
+        if (shield != null)shieldUI =           shield.GetComponent<TextMeshPro>();
+        if (drillBit != null)drillBitUI =         drillBit.GetComponent<TextMeshPro>();
+        if (stopMachine != null)stopMachineUI =      stopMachine.GetComponent<TextMeshPro>();
+        if (heightCrank != null)heightCrankUI =      heightCrank.GetComponent<TextMeshPro>();
+        if (leftRightCrank != null)leftRightCrankUI =   leftRightCrank.GetComponent<TextMeshPro>();
+        if (forwardBackCrank != null)forwardBackCrankUI = forwardBackCrank.GetComponent<TextMeshPro>();        
     }
 
     
