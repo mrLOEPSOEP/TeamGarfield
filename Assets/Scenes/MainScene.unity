@@ -8860,8 +8860,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 0, z: 3.246692}
-  m_Center: {x: 0, y: 0, z: -0.1233454}
+  m_Size: {x: 3, y: 0, z: 4.1796436}
+  m_Center: {x: 0, y: 0, z: -0.58981574}
 --- !u!33 &523901412
 MeshFilter:
   m_ObjectHideFlags: 10
