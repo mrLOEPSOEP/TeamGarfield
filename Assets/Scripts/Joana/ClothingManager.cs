@@ -1,8 +1,25 @@
 using UnityEngine;
 
-public class ClothingManager : MonoBehaviour
+public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
 {
     public static ClothingManager Instance { get; private set; }
+    
+    [SerializeField] SafetySocketSubject jumpSuitSocket;    
+    [SerializeField] SafetySocketSubject safetyGlassesSocket;
+    [SerializeField] SafetySocketSubject safetyShoesSocket;
+
+    public bool jumpsuit { get; private set; }
+    public bool safetyGlasses { get; private set; }
+    public bool safetyShoes { get; private set; }
+
+
+    void Start()
+    {
+        //Formatted like this to keep the code more confined. this does the same as going under it every line adds one observer
+        if (jumpSuitSocket != null)         {jumpSuitSocket.AddObserver(this);}
+        if (safetyGlassesSocket != null)    {safetyGlassesSocket.AddObserver(this);}
+        if (safetyShoesSocket != null)      {safetyShoesSocket.AddObserver(this);}
+    }
 
     private void Awake()
     {
@@ -16,27 +33,51 @@ public class ClothingManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public bool SafetyGlasses { get; private set; }
-    public bool Jumpsuit { get; private set; }
-    public bool SafetyShoes { get; private set; }
+    public void OnNotify(XRSubject<SafetyData> sender, SafetyData data)
+    {
+        if (sender == jumpSuitSocket)
+        {
+            jumpsuit = data.isPresent;
+        }
+        
+        if (sender == safetyGlassesSocket)
+        {
+            safetyGlasses = data.isPresent;   
+        }
 
+        if (sender == safetyShoesSocket)
+        {
+            safetyShoes = data.isPresent;
+        }
+
+        //Check if all conditions are met
+        if (HasAllRequiredClothing())
+        {
+            Debug.Log("all conditions met");
+        }
+    }
     public void EquipSafetyGlasses()
     {
-        SafetyGlasses = true;
+        safetyGlasses = true;
     }
 
     public void EquipJumpsuit()
     {
-        Jumpsuit = true;
+        jumpsuit = true;
     }
 
     public void EquipSafetyShoes()
     {
-        SafetyShoes = true;
+        safetyShoes = true;
     }
 
     public bool HasAllRequiredClothing()
     {
-        return SafetyGlasses && Jumpsuit && SafetyShoes;
+        //If a socket is assigned we check the value otherwise treat it as true
+        bool glassesCheck = (safetyGlassesSocket == null) || safetyGlasses;
+        bool jumpsuitCheck = (jumpSuitSocket == null) || jumpsuit;
+        bool shoesCheck = (safetyShoesSocket == null) || safetyShoes;
+
+        return glassesCheck && jumpsuitCheck && shoesCheck;
     }
 }
