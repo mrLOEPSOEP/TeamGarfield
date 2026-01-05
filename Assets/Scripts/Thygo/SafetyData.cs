@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public struct SafetyData
 {
     public EquipmentType type; // reference to the safetyEquipment scripts equipmenttypes.

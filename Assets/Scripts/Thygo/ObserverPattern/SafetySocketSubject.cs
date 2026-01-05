@@ -3,6 +3,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class SafetySocketSubject : XRSubject<SafetyData>
 {
+    [Header("SocketRequiredType")]
     [SerializeField] EquipmentType requiredType;
 
     //Call this throught the XRSocketInteractor's Select Entered event
