@@ -19,16 +19,16 @@ public class GameHelpManager : MonoBehaviour, IAmObserver<ButtonType>
     [SerializeField] GameObject leftRightCrank;
     [SerializeField] GameObject forwardBackCrank;
 
-    TextMeshPro startMachineUI;
-    TextMeshPro emergenyStopUI;
-    TextMeshPro drillSpeedKnobUI;
-    TextMeshPro materialClampUI;
-    TextMeshPro shieldUI;
-    TextMeshPro drillBitUI;
-    TextMeshPro stopMachineUI;
-    TextMeshPro heightCrankUI;
-    TextMeshPro leftRightCrankUI;
-    TextMeshPro forwardBackCrankUI;
+    TextMeshProUGUI startMachineUI;
+    TextMeshProUGUI emergenyStopUI;
+    TextMeshProUGUI drillSpeedKnobUI;
+    TextMeshProUGUI materialClampUI;
+    TextMeshProUGUI shieldUI;
+    TextMeshProUGUI drillBitUI;
+    TextMeshProUGUI stopMachineUI;
+    TextMeshProUGUI heightCrankUI;
+    TextMeshProUGUI leftRightCrankUI;
+    TextMeshProUGUI forwardBackCrankUI;
 
     [Header("UI text English")]
     [SerializeField] string startMachineTextEnglish;
@@ -56,20 +56,20 @@ public class GameHelpManager : MonoBehaviour, IAmObserver<ButtonType>
     #endregion
 
 
-    //Start for testing stuff
+    //Get the corresponding text box in the lazy tooltip and set it to its variable.
     void Start()
     {
-        SetUITextEnglish();
-        if (startMachine != null)startMachineUI =     startMachine.GetComponent<TextMeshPro>();
-        if (emergenyStop != null)emergenyStopUI  =    emergenyStop.GetComponent<TextMeshPro>();
-        if (drillSpeedKnob != null)drillSpeedKnobUI =   drillSpeedKnob.GetComponent<TextMeshPro>();
-        if (materialClamp != null)materialClampUI =    materialClamp.GetComponent<TextMeshPro>();
-        if (shield != null)shieldUI =           shield.GetComponent<TextMeshPro>();
-        if (drillBit != null)drillBitUI =         drillBit.GetComponent<TextMeshPro>();
-        if (stopMachine != null)stopMachineUI =      stopMachine.GetComponent<TextMeshPro>();
-        if (heightCrank != null)heightCrankUI =      heightCrank.GetComponent<TextMeshPro>();
-        if (leftRightCrank != null)leftRightCrankUI =   leftRightCrank.GetComponent<TextMeshPro>();
-        if (forwardBackCrank != null)forwardBackCrankUI = forwardBackCrank.GetComponent<TextMeshPro>();        
+        if (startMachine != null)startMachineUI =             startMachine.GetComponentInChildren<TextMeshProUGUI>();
+        if (emergenyStop != null)emergenyStopUI  =            emergenyStop.GetComponentInChildren<TextMeshProUGUI>();
+        if (drillSpeedKnob != null)drillSpeedKnobUI =       drillSpeedKnob.GetComponentInChildren<TextMeshProUGUI>();
+        if (materialClamp != null)materialClampUI =          materialClamp.GetComponentInChildren<TextMeshProUGUI>();
+        if (shield != null)shieldUI =                               shield.GetComponentInChildren<TextMeshProUGUI>();
+        if (drillBit != null)drillBitUI =                         drillBit.GetComponentInChildren<TextMeshProUGUI>();
+        if (stopMachine != null)stopMachineUI =                stopMachine.GetComponentInChildren<TextMeshProUGUI>();
+        if (heightCrank != null)heightCrankUI =                heightCrank.GetComponentInChildren<TextMeshProUGUI>();
+        if (leftRightCrank != null)leftRightCrankUI =       leftRightCrank.GetComponentInChildren<TextMeshProUGUI>();
+        if (forwardBackCrank != null)forwardBackCrankUI = forwardBackCrank.GetComponentInChildren<TextMeshProUGUI>();  
+        SetUITextEnglish();      
     }
 
     
@@ -82,7 +82,7 @@ public class GameHelpManager : MonoBehaviour, IAmObserver<ButtonType>
 
     void SetGuidanceMode(ButtonType buttonType)
     {
-        if (buttonType == ButtonType.Guidance);
+        if (buttonType == ButtonType.Guidance)
         {
             //Check and set the language
             if (buttonType == ButtonType.English)
@@ -100,31 +100,31 @@ public class GameHelpManager : MonoBehaviour, IAmObserver<ButtonType>
     //Setting all tooltips to English
     void SetUITextEnglish()
     {
-        startMachineUI.text     = startMachineTextEnglish;
-        emergenyStopUI.text     = emergenyStopTextEnglish;
-        drillSpeedKnobUI.text   = drillBitTextEnglish;
-        materialClampUI.text    = materialClampTextEnglish;
-        shieldUI.text           = shieldTextEnglish;
-        drillBitUI.text         = drillBitTextEnglish;
-        stopMachineUI.text      = startMachineTextEnglish;
-        heightCrankUI.text      = heightCrankTextEnglish;
-        leftRightCrankUI.text   = leftRightCranktextEnglish;
-        forwardBackCrankUI.text = forwardBackCrankTextEnglish;
+        if (startMachineUI != null)startMachineUI.text     = startMachineTextEnglish;
+        if (emergenyStopUI != null)emergenyStopUI.text     = emergenyStopTextEnglish;
+        if (drillSpeedKnobUI != null)drillSpeedKnobUI.text   = drillBitTextEnglish;
+        if (materialClampUI != null)materialClampUI.text    = materialClampTextEnglish;
+        if (shieldUI != null)shieldUI.text           = shieldTextEnglish;
+        if (drillBitUI != null)drillBitUI.text         = drillBitTextEnglish;
+        if (stopMachineUI != null)stopMachineUI.text      = startMachineTextEnglish;
+        if (heightCrankUI != null)heightCrankUI.text      = heightCrankTextEnglish;
+        if (leftRightCrankUI != null)leftRightCrankUI.text   = leftRightCranktextEnglish;
+        if (forwardBackCrankUI != null)forwardBackCrankUI.text = forwardBackCrankTextEnglish;
     }
 
     //Setting all text to Dutch for those who want to use that language
     void SetUITextDutch()
     {
-        startMachineUI.text     = startMachineTextDutch;
-        emergenyStopUI.text     = emergenyStopTextDutch;
-        drillSpeedKnobUI.text   = drillBitTextDutch;
-        materialClampUI.text    = materialClampTextDutch;
-        shieldUI.text           = shieldTextDutch;
-        drillBitUI.text         = drillBitTextDutch;
-        stopMachineUI.text      = startMachineTextDutch;
-        heightCrankUI.text      = heightCrankTextDutch;
-        leftRightCrankUI.text   = leftRightCranktextDutch;
-        forwardBackCrankUI.text = forwardBackCrankTextDutch;
+        if (startMachineUI != null)startMachineUI.text     = startMachineTextDutch;
+        if (emergenyStopUI != null)emergenyStopUI.text     = emergenyStopTextDutch;
+        if (drillSpeedKnobUI != null)drillSpeedKnobUI.text   = drillBitTextDutch;
+        if (materialClampUI != null)materialClampUI.text    = materialClampTextDutch;
+        if (shieldUI != null)shieldUI.text           = shieldTextDutch;
+        if (drillBitUI != null)drillBitUI.text         = drillBitTextDutch;
+        if (stopMachineUI != null)stopMachineUI.text      = startMachineTextDutch;
+        if (heightCrankUI != null)heightCrankUI.text      = heightCrankTextDutch;
+        if (leftRightCrankUI != null)leftRightCrankUI.text   = leftRightCranktextDutch;
+        if (forwardBackCrankUI != null)forwardBackCrankUI.text = forwardBackCrankTextDutch;
     }
 
 
