@@ -12,6 +12,7 @@ public class MaterialSocketSubject : XRSubject<MaterialTypeData>
         if (material != null)
         {
             NotifyObservers(this, new MaterialTypeData{type = material.materialType, isPresent = true});
+            Debug.Log(material.materialType);
         }
     }
 
