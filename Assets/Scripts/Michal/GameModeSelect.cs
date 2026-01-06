@@ -17,21 +17,21 @@ public class GameModeSelect : Subject<ButtonType>
     {
         NotifyObservers(ButtonType.Guidance);
         gameObject.SetActive(false);
-        TeleportToDrillingRoom();
+        //TeleportToDrillingRoom();
     }   
 
     public void OnPracticeModeSelected()
     {
         NotifyObservers(ButtonType.Practice);
         gameObject.SetActive(false);
-        TeleportToDrillingRoom();
+        //TeleportToDrillingRoom();
     } 
 
     public void OnChallengeModeSelected()
     {
         NotifyObservers(ButtonType.Challenge);
         gameObject.SetActive(false);
-        TeleportToDrillingRoom();
+        //TeleportToDrillingRoom();
     }
     //To teleport the player to the drilling room can be removed once locker room clothing game is finished
     void TeleportToDrillingRoom()
