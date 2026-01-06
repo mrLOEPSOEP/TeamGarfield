@@ -7,6 +7,10 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
     [SerializeField] SafetySocketSubject jumpSuitSocket;    
     [SerializeField] SafetySocketSubject safetyGlassesSocket;
     [SerializeField] SafetySocketSubject safetyShoesSocket;
+    
+    [Header("DrillRoomTeleport")]
+    [SerializeField] GameObject TeleportPosition;
+    [SerializeField] GameObject player;
 
     public bool jumpsuit { get; private set; }
     public bool safetyGlasses { get; private set; }
@@ -53,6 +57,7 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         //Check if all conditions are met
         if (HasAllRequiredClothing())
         {
+            TeleportToDrillingRoom();
             Debug.Log("all conditions met");
         }
     }
@@ -79,5 +84,10 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         bool shoesCheck = (safetyShoesSocket == null) || safetyShoes;
 
         return glassesCheck && jumpsuitCheck && shoesCheck;
+    }
+
+    void TeleportToDrillingRoom()
+    {
+        player.transform.position = TeleportPosition.transform.position;
     }
 }
