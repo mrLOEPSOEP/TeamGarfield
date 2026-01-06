@@ -24895,17 +24895,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7785151267686525226, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
   m_PrefabInstance: {fileID: 1010623908}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1010623910 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7785151267686525225, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
-  m_PrefabInstance: {fileID: 1010623908}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1010623911 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2015539789043793658, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
   m_PrefabInstance: {fileID: 1010623908}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010623910}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16809ed3baa3d2341b75ec4c0aa874d0, type: 3}
@@ -45062,13 +45057,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593697767}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2d91b6775d7b7e46a33bc34f84c16c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameHelpManager
+  languageSelector: {fileID: 1956226453}
+  gameModeSelector: {fileID: 1956226453}
   startMachine: {fileID: 52879954}
-  emergenyStop: {fileID: 1010623910}
+  emergenyStop: {fileID: 2115833512}
   drillSpeedKnob: {fileID: 2120223112}
   materialClamp: {fileID: 816699484}
   shield: {fileID: 1403854800}
@@ -64278,6 +64275,11 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &2115833512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4704240698125147205, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
+  m_PrefabInstance: {fileID: 1010623908}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2119818355
 GameObject:
   m_ObjectHideFlags: 0
