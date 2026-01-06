@@ -7,6 +7,10 @@ public class GameHelpManager : MonoBehaviour, IAmObserver<ButtonType>
     //change names to what they actually are
     //references to the thing that provides some form of help
     #region Serializables
+    [Header("The language and gamemode select references")]
+    [SerializeField] GameObject languageSelector;
+    [SerializeField] GameObject gameModeSelector;
+
     [Header("References to the textbox in UI")]
     [SerializeField] GameObject startMachine;
     [SerializeField] GameObject emergenyStop;
@@ -59,16 +63,16 @@ public class GameHelpManager : MonoBehaviour, IAmObserver<ButtonType>
     //Get the corresponding text box in the lazy tooltip and set it to its variable.
     void Start()
     {
-        if (startMachine != null)startMachineUI =             startMachine.GetComponentInChildren<TextMeshProUGUI>();
-        if (emergenyStop != null)emergenyStopUI  =            emergenyStop.GetComponentInChildren<TextMeshProUGUI>();
-        if (drillSpeedKnob != null)drillSpeedKnobUI =       drillSpeedKnob.GetComponentInChildren<TextMeshProUGUI>();
-        if (materialClamp != null)materialClampUI =          materialClamp.GetComponentInChildren<TextMeshProUGUI>();
-        if (shield != null)shieldUI =                               shield.GetComponentInChildren<TextMeshProUGUI>();
-        if (drillBit != null)drillBitUI =                         drillBit.GetComponentInChildren<TextMeshProUGUI>();
-        if (stopMachine != null)stopMachineUI =                stopMachine.GetComponentInChildren<TextMeshProUGUI>();
-        if (heightCrank != null)heightCrankUI =                heightCrank.GetComponentInChildren<TextMeshProUGUI>();
-        if (leftRightCrank != null)leftRightCrankUI =       leftRightCrank.GetComponentInChildren<TextMeshProUGUI>();
-        if (forwardBackCrank != null)forwardBackCrankUI = forwardBackCrank.GetComponentInChildren<TextMeshProUGUI>();  
+        if (startMachine != null)startMachineUI =             startMachine.GetComponent<TextMeshProUGUI>();
+        if (emergenyStop != null)emergenyStopUI  =            emergenyStop.GetComponent<TextMeshProUGUI>();
+        if (drillSpeedKnob != null)drillSpeedKnobUI =       drillSpeedKnob.GetComponent<TextMeshProUGUI>();
+        if (materialClamp != null)materialClampUI =          materialClamp.GetComponent<TextMeshProUGUI>();
+        if (shield != null)shieldUI =                               shield.GetComponent<TextMeshProUGUI>();
+        if (drillBit != null)drillBitUI =                         drillBit.GetComponent<TextMeshProUGUI>();
+        if (stopMachine != null)stopMachineUI =                stopMachine.GetComponent<TextMeshProUGUI>();
+        if (heightCrank != null)heightCrankUI =                heightCrank.GetComponent<TextMeshProUGUI>();
+        if (leftRightCrank != null)leftRightCrankUI =       leftRightCrank.GetComponent<TextMeshProUGUI>();
+        if (forwardBackCrank != null)forwardBackCrankUI = forwardBackCrank.GetComponent<TextMeshProUGUI>();  
         SetUITextEnglish();      
     }
 
@@ -82,6 +86,14 @@ public class GameHelpManager : MonoBehaviour, IAmObserver<ButtonType>
 
     void SetGuidanceMode(ButtonType buttonType)
     {
+        var dutch = ButtonType.Dutch;
+
+        if (buttonType == dutch)
+        {
+            SetUITextDutch();
+        }
+
+        //This does nothing now this was a logic error but remains here because a change will be in there.
         if (buttonType == ButtonType.Guidance)
         {
             //Check and set the language
