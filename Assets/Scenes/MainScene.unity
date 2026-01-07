@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 7815207}
   - component: {fileID: 7815206}
   - component: {fileID: 7815205}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftSideCrankPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,6 +425,14 @@ PrefabInstance:
     - target: {fileID: 2717550568034688974, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_HoverEnteredData.m_Amplitude
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053579577978487484, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_PhysicsLayerMask.m_Bits
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6436123941575367715, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_PhysicsLayerMask.m_Bits
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 7054646180837666701, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Enabled
@@ -3704,37 +3712,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3103900587782335073, guid: e1116a9f798e55d42b47443889638c8b, type: 3}
   m_PrefabInstance: {fileID: 1003943461}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &237092821
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 237092822}
-  m_Layer: 0
-  m_Name: AttachPoint (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &237092822
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 237092821}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.037699997, z: -0.0010697842}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 952593487}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &237957715
 GameObject:
   m_ObjectHideFlags: 0
@@ -3968,6 +3945,10 @@ PrefabInstance:
     - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
       propertyPath: m_Name
       value: AudioAffordance
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6660,7 +6641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 424788020}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dampener
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11355,7 +11336,7 @@ GameObject:
   - component: {fileID: 608798676}
   - component: {fileID: 608798675}
   - component: {fileID: 608798679}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KnobTopRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13561,7 +13542,7 @@ GameObject:
   - component: {fileID: 675961305}
   - component: {fileID: 675961304}
   - component: {fileID: 675961303}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FrontCrankPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15292,6 +15273,10 @@ PrefabInstance:
     - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
       propertyPath: m_Name
       value: AudioAffordance
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18527,6 +18512,37 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &837872381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 837872382}
+  m_Layer: 6
+  m_Name: AttachPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &837872382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837872381}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.037699997, z: -0.0010699034}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 952593487}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &843304438
 GameObject:
   m_ObjectHideFlags: 0
@@ -22958,8 +22974,8 @@ GameObject:
   - component: {fileID: 952593494}
   - component: {fileID: 952593497}
   - component: {fileID: 952593496}
-  m_Layer: 0
-  m_Name: Cube (1)
+  m_Layer: 6
+  m_Name: Steel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22978,7 +22994,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 237092822}
+  - {fileID: 837872382}
   - {fileID: 646013482}
   m_Father: {fileID: 25694391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23364,7 +23380,7 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_AttachTransform: {fileID: 1024553730}
+  m_AttachTransform: {fileID: 837872382}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -24851,15 +24867,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 270617134337584414, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.38660717
+      value: -0.024706826
       objectReference: {fileID: 0}
     - target: {fileID: 270617134337584414, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3163552
+      value: 0.0039652586
       objectReference: {fileID: 0}
     - target: {fileID: 270617134337584414, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.7423401
+      value: -0.0010699034
       objectReference: {fileID: 0}
     - target: {fileID: 270617134337584414, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -24900,6 +24916,10 @@ PrefabInstance:
     - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
       propertyPath: m_Name
       value: AudioAffordance
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25330,7 +25350,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1024553730}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttachPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26813,6 +26833,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioAffordance
       objectReference: {fileID: 0}
+    - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28253,7 +28277,7 @@ GameObject:
   - component: {fileID: 1180349857}
   - component: {fileID: 1180349856}
   - component: {fileID: 1180349854}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpdownMove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35051,7 +35075,7 @@ GameObject:
   - component: {fileID: 1367138564}
   - component: {fileID: 1367138563}
   - component: {fileID: 1367138562}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KnobBottomRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38504,7 +38528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1402265854}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ResetDamper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39673,6 +39697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioAffordance
       objectReference: {fileID: 0}
+    - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39695,8 +39723,8 @@ GameObject:
   - component: {fileID: 1427104918}
   - component: {fileID: 1427104917}
   - component: {fileID: 1427104916}
-  m_Layer: 0
-  m_Name: Cube
+  m_Layer: 6
+  m_Name: Copper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40028,7 +40056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0cac8e9076b7ae46a43b7c849749e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaterialTypePublish
-  materialType: {fileID: 11400000, guid: 94f11f6a3824f4646a30078ce5b43e3f, type: 2}
+  materialType: {fileID: 11400000, guid: e35e59cc694995046911df763efa45d9, type: 2}
 --- !u!65 &1427104917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40122,7 +40150,7 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 1024553730}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -40685,6 +40713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioAffordance
       objectReference: {fileID: 0}
+    - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40730,7 +40762,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1452527299}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dampener
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41486,7 +41518,7 @@ GameObject:
   - component: {fileID: 1491904813}
   - component: {fileID: 1491904812}
   - component: {fileID: 1491904811}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KnobBottomLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44924,7 +44956,7 @@ GameObject:
   - component: {fileID: 1550975136}
   - component: {fileID: 1550975135}
   - component: {fileID: 1550975140}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46274,7 +46306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1609107410}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AbsorbReset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49128,6 +49160,10 @@ PrefabInstance:
     - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
       propertyPath: m_Name
       value: AudioAffordance
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -60028,7 +60064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1976302189}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dampener
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61479,6 +61515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioAffordance
       objectReference: {fileID: 0}
+    - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -62069,6 +62109,10 @@ PrefabInstance:
     - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
       propertyPath: m_Name
       value: AudioAffordance
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -64547,15 +64591,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 270617134337584414, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.38660717
+      value: -0.024706826
       objectReference: {fileID: 0}
     - target: {fileID: 270617134337584414, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3163552
+      value: 0.003965229
       objectReference: {fileID: 0}
     - target: {fileID: 270617134337584414, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.9923401
+      value: -0.0010697842
       objectReference: {fileID: 0}
     - target: {fileID: 270617134337584414, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -64588,6 +64632,10 @@ PrefabInstance:
     - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
       propertyPath: m_Name
       value: AudioAffordance
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853851935178116021, guid: fe35179af20d8424398bdf44237c60a9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -65596,7 +65644,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2146890419}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AbsorbReset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66479,7 +66527,7 @@ GameObject:
   - component: {fileID: 3160686176469453825}
   - component: {fileID: 8571519822807181508}
   - component: {fileID: 8571519822807181509}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66650,7 +66698,7 @@ GameObject:
   - component: {fileID: 5302699255003992066}
   - component: {fileID: 6481025010658390791}
   - component: {fileID: 8750984465850796392}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: handlecircle.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66813,7 +66861,7 @@ GameObject:
   - component: {fileID: 2247658444178392867}
   - component: {fileID: 3024095885645723119}
   - component: {fileID: 7535002283561742708}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wood box.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67009,7 +67057,7 @@ GameObject:
   - component: {fileID: 3441047325454530163}
   - component: {fileID: 3909169012996848304}
   - component: {fileID: 1201407927488856701}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67042,7 +67090,7 @@ GameObject:
   - component: {fileID: 8474613796306803743}
   - component: {fileID: 6949172508198714930}
   - component: {fileID: 2776473740621096867}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67188,7 +67236,7 @@ GameObject:
   - component: {fileID: 280665991422117259}
   - component: {fileID: 7275049293990718050}
   - component: {fileID: 4297922426347938431}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67761,7 +67809,7 @@ GameObject:
   - component: {fileID: 2970450325364609592}
   - component: {fileID: 2947569438188913369}
   - component: {fileID: 1387486442561299842}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trihandleout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68314,7 +68362,7 @@ GameObject:
   - component: {fileID: 3612893426454616375}
   - component: {fileID: 189154434244391437}
   - component: {fileID: 3139566399648589053}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: handlecircle.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69049,7 +69097,7 @@ GameObject:
   - component: {fileID: 1532336771509334777}
   - component: {fileID: 8962617734193188069}
   - component: {fileID: 4644304375947856184}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trihandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
