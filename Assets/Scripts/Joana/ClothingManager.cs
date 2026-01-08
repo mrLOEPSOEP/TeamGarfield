@@ -88,15 +88,22 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         bool jumpsuitCheck = (jumpSuitSocket == null) || jumpsuit;
         bool shoesCheck = (safetyShoesSocket == null) || safetyShoes;
 
-        return glassesCheck && jumpsuitCheck && shoesCheck && HasForbiddenClothes();
+        bool noForbiddenItemsPresent;
+        if (HasForbiddenClothes())
+            noForbiddenItemsPresent = false;
+        else  
+            noForbiddenItemsPresent = true;
+
+
+        return glassesCheck && jumpsuitCheck && shoesCheck && noForbiddenItemsPresent;
     }
 
     bool HasForbiddenClothes()
     {
-        bool glovesCheckLeft = (safetyGloveLeft == null) || safetyGloveLeft;
-        bool glovesCheckRight = (safetyGloveRight == null) || safetyGloveRight;
+        bool glovesCheckLeft = (safetyGloveLeft == null) && safetyGloveLeft;
+        bool glovesCheckRight = (safetyGloveRight == null) && safetyGloveRight;
 
-        return glovesCheckLeft && glovesCheckRight;
+        return glovesCheckLeft || glovesCheckRight;
     }
 
     void TeleportToDrillingRoom()
