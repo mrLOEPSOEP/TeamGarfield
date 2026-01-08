@@ -88,11 +88,7 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         bool jumpsuitCheck = (jumpSuitSocket == null) || jumpsuit;
         bool shoesCheck = (safetyShoesSocket == null) || safetyShoes;
 
-        bool noForbiddenItemsPresent;
-        if (HasForbiddenClothes())
-            noForbiddenItemsPresent = false;
-        else  
-            noForbiddenItemsPresent = true;
+        bool noForbiddenItemsPresent = !HasAllRequiredClothing();
 
 
         return glassesCheck && jumpsuitCheck && shoesCheck && noForbiddenItemsPresent;
