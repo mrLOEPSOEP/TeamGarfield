@@ -58,7 +58,7 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
             safetyShoes = data.isPresent;
         }
 
-
+        HasForbiddenClothes();
         //Check if all conditions are met
         if (HasAllRequiredClothing())
         {
