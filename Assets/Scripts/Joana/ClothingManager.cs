@@ -91,7 +91,7 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         bool noForbiddenItemsPresent = !HasForbiddenClothes();
 
 
-        return glassesCheck && jumpsuitCheck && shoesCheck && noForbiddenItemsPresent;
+        return glassesCheck && jumpsuitCheck && shoesCheck;
     }
 
     bool HasForbiddenClothes()
