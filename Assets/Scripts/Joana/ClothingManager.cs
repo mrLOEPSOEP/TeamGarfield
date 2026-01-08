@@ -7,6 +7,8 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
     [SerializeField] SafetySocketSubject jumpSuitSocket;    
     [SerializeField] SafetySocketSubject safetyGlassesSocket;
     [SerializeField] SafetySocketSubject safetyShoesSocket;
+    [SerializeField] SafetySocketSubject safetyGloveLeft;
+    [SerializeField] SafetySocketSubject safetyGloveRight;
     
     [Header("DrillRoomTeleport")]
     [SerializeField] GameObject TeleportPosition;
@@ -23,6 +25,8 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         if (jumpSuitSocket != null)         {jumpSuitSocket.AddObserver(this);}
         if (safetyGlassesSocket != null)    {safetyGlassesSocket.AddObserver(this);}
         if (safetyShoesSocket != null)      {safetyShoesSocket.AddObserver(this);}
+        if (safetyGloveLeft != null)        {safetyGloveLeft.AddObserver(this);}
+        if (safetyGloveRight != null)       {safetyGloveRight.AddObserver(this);}
     }
 
     private void Awake()
@@ -54,6 +58,7 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
             safetyShoes = data.isPresent;
         }
 
+
         //Check if all conditions are met
         if (HasAllRequiredClothing())
         {
@@ -83,7 +88,15 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         bool jumpsuitCheck = (jumpSuitSocket == null) || jumpsuit;
         bool shoesCheck = (safetyShoesSocket == null) || safetyShoes;
 
-        return glassesCheck && jumpsuitCheck && shoesCheck;
+        return glassesCheck && jumpsuitCheck && shoesCheck && HasForbiddenClothes();
+    }
+
+    bool HasForbiddenClothes()
+    {
+        bool glovesCheckLeft = (safetyGloveLeft == null) || safetyGloveLeft;
+        bool glovesCheckRight = (safetyGloveRight == null) || safetyGloveRight;
+
+        return glovesCheckLeft && glovesCheckRight;
     }
 
     void TeleportToDrillingRoom()
