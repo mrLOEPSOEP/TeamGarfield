@@ -17,7 +17,8 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
     public bool jumpsuit { get; private set; }
     public bool safetyGlasses { get; private set; }
     public bool safetyShoes { get; private set; }
-
+    public bool leftGlove { get; private set; }
+    public bool rightGlove { get; private set; }
 
     void Start()
     {
@@ -43,22 +44,15 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
 
     public void OnNotify(XRSubject<SafetyData> sender, SafetyData data)
     {
-        if (sender == jumpSuitSocket)
-        {
-            jumpsuit = data.isPresent;
-        }
-        
-        if (sender == safetyGlassesSocket)
-        {
-            safetyGlasses = data.isPresent;   
-        }
+        //Track things that have to be there
+        if (sender == jumpSuitSocket) jumpsuit = data.isPresent;
+        if (sender == safetyGlassesSocket) safetyGlasses = data.isPresent;
+        if (sender == safetyShoesSocket) safetyShoes = data.isPresent;
 
-        if (sender == safetyShoesSocket)
-        {
-            safetyShoes = data.isPresent;
-        }
+        //Track the gloves that may not be there
+        if (sender == safetyGloveLeft) leftGlove = data.isPresent;
+        if (sender == safetyGloveRight) rightGlove = data.isPresent;
 
-        HasForbiddenClothes();
         //Check if all conditions are met
         if (HasAllRequiredClothing())
         {
@@ -66,21 +60,6 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
             Debug.Log("all conditions met");
         }
     }
-    public void EquipSafetyGlasses()
-    {
-        safetyGlasses = true;
-    }
-
-    public void EquipJumpsuit()
-    {
-        jumpsuit = true;
-    }
-
-    public void EquipSafetyShoes()
-    {
-        safetyShoes = true;
-    }
-
     public bool HasAllRequiredClothing()
     {
         //If a socket is assigned we check the value otherwise treat it as true
@@ -91,13 +70,13 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         bool noForbiddenItemsPresent = !HasForbiddenClothes();
 
 
-        return glassesCheck && jumpsuitCheck && shoesCheck;
+        return glassesCheck && jumpsuitCheck && shoesCheck && noForbiddenItemsPresent;
     }
 
     bool HasForbiddenClothes()
     {
-        bool glovesCheckLeft = (safetyGloveLeft == null) && safetyGloveLeft;
-        bool glovesCheckRight = (safetyGloveRight == null) && safetyGloveRight;
+        bool glovesCheckLeft = (safetyGloveLeft != null) || safetyGloveLeft;
+        bool glovesCheckRight = (safetyGloveRight != null) || safetyGloveRight;
 
         return glovesCheckLeft || glovesCheckRight;
     }
