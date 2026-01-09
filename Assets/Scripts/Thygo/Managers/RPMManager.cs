@@ -1,15 +1,19 @@
 using System;
+using Unity.VRTemplate;
 using UnityEngine;
 
-public class RPMManager : MonoBehaviour, IAmXRObserver<AxisData>
+public class RPMManager : Subject<RPMData>, IAmXRObserver<AxisData>
 {
     //Checks the positions of the 45degree dials to form the RPM for the drill
 
     [SerializeField] XRSubject<AxisData> topRPMDial;
     [SerializeField] XRSubject<AxisData> bottomRPMDial;
+    
 
     int topInput;
     int bottomInput;
+    [HideInInspector] public int currentRPM;
+
 
     void Start()
     {
@@ -17,28 +21,36 @@ public class RPMManager : MonoBehaviour, IAmXRObserver<AxisData>
         bottomRPMDial.AddObserver(this);
     }
 
+    int[,] rpmTable = new int[2,3]
+    {
+        {640,   440,    150},
+        {770,   530,    180}
+    };
+
     public void OnNotify(XRSubject<AxisData> sender, AxisData data)
     {
+        float dialPos = data.axisRotateValue;
+
         if (sender == topRPMDial)
         {
-            if (data.axisRotateValue == .5)
-            {topInput = 0;}
-            else if (data.axisRotateValue == 1)
-            {topInput = 2;}
-            else
-            {topInput = 1;}
+            //This sets it 0 if it is under .5 and 1 if over ? is compact if and : makes a else
+            topInput = (dialPos > .5f) ? 0 : 1;
         }
-
-        if (sender == bottomRPMDial)
+        else if (sender == bottomRPMDial)
         {
-            if (data.axisRotateValue == .5)
-            {bottomInput = 0;}
-            else if (data.axisRotateValue == 1)
-            {bottomInput = 2;}
-            else
-            {bottomInput = 1;}
+            bottomInput = GetIndexFromFloat(dialPos);
         }
 
+        currentRPM = rpmTable[topInput, bottomInput];
         
+        NotifyObservers(new RPMData{RPMCurrent = currentRPM});
     }
+
+    int GetIndexFromFloat(float value)
+    {
+        if (value < .25f) return 0; //Left position
+        if (value < .75f) return 1; //middle pos
+        return 2;                   //Right pos
+    }
+
 }
