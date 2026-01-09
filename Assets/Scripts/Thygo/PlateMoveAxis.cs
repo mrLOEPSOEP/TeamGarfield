@@ -13,6 +13,9 @@ public class PlateMoveAxis : MonoBehaviour, IAmXRObserver<AxisData>
     //Reference to the moving bottom plate of the machine
     [Header("Reference to the baseplate")]
     [SerializeField] GameObject plate;
+
+    [Header("DrillRotator reference")]
+    [SerializeField] DrillRotator drillRotator;
     
     //Dictionary to track the last value of each sender
     Dictionary<XRSubject<AxisData>, float> lastCrankValues = new Dictionary<XRSubject<AxisData>, float>();
@@ -33,51 +36,54 @@ public class PlateMoveAxis : MonoBehaviour, IAmXRObserver<AxisData>
 
     public void OnNotify(XRSubject<AxisData> sender, AxisData axisData)
     {
-        float currentCrankValue = axisData.axisRotateValue;
-        float lastCrankValue;
-        bool isFirstNotification = false; //A flag so position won't be updated at the start of the game
-        platePosition = plate.transform.localPosition;
-
-        //if there is no value in the dictionary set initial value to the current value makes sure starting delta = 0
-        if (!lastCrankValues.TryGetValue(sender, out lastCrankValue))
+        if(drillRotator != null && drillRotator.IsMachineRunning())
         {
-            lastCrankValue = currentCrankValue;
-            lastCrankValues.Add(sender, currentCrankValue);
-            isFirstNotification = true;
-        }
-        //calculate the change (delta) since the last update
-        float crankValueDelta = currentCrankValue - lastCrankValue;
+            float currentCrankValue = axisData.axisRotateValue;
+            float lastCrankValue;
+            bool isFirstNotification = false; //A flag so position won't be updated at the start of the game
+            platePosition = plate.transform.localPosition;
 
-        //return if this was the first notification as to not update anything
-        if(isFirstNotification)
-        {
-            return;
-        }
+            //if there is no value in the dictionary set initial value to the current value makes sure starting delta = 0
+            if (!lastCrankValues.TryGetValue(sender, out lastCrankValue))
+            {
+                lastCrankValue = currentCrankValue;
+                lastCrankValues.Add(sender, currentCrankValue);
+                isFirstNotification = true;
+            }
+            //calculate the change (delta) since the last update
+            float crankValueDelta = currentCrankValue - lastCrankValue;
 
-        //Scale delta for movement as delta is small number  
-        float scaledDelta = crankValueDelta * scaleValue;
+            //return if this was the first notification as to not update anything
+            if(isFirstNotification)
+            {
+                return;
+            }
 
-        //Updata the stored value for the next calculation
-        lastCrankValues[sender] = currentCrankValue;
+            //Scale delta for movement as delta is small number  
+            float scaledDelta = crankValueDelta * scaleValue;
+
+            //Updata the stored value for the next calculation
+            lastCrankValues[sender] = currentCrankValue;
 
 
-        //checking who send the notification and acting correspondantly
-        if(sender == crankX)
-        {
-            platePosition.x += scaledDelta;
+            //checking who send the notification and acting correspondantly
+            if(sender == crankX)
+            {
+                platePosition.x += scaledDelta;
+            }
+            else if (sender == crankY)
+            {
+                Debug.Log("Crank y notified");
+                platePosition.y += scaledDelta; 
+            }
+            else if (sender == crankZ)
+            {
+                Debug.Log("Crank z notified");
+                platePosition.z += scaledDelta;
+            }
+            
+            plate.transform.localPosition = platePosition;
         }
-        else if (sender == crankY)
-        {
-            Debug.Log("Crank y notified");
-            platePosition.y += scaledDelta; 
-        }
-        else if (sender == crankZ)
-        {
-            Debug.Log("Crank z notified");
-            platePosition.z += scaledDelta;
-        }
-        
-        plate.transform.localPosition = platePosition;
     }
 
     void OnEnable()

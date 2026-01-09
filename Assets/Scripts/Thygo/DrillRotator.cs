@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DrillRotator : MonoBehaviour
 {
+    [SerializeField] UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable[] tableKnobs;
     [SerializeField] RPMManager rpmManager;
     bool isRunning;
     float rotationSpeed;
@@ -22,6 +23,19 @@ public class DrillRotator : MonoBehaviour
     public void ToggleDrill()
     {
         isRunning = !isRunning;
+        // Physically disable the knobs so they can't be turned at all
+        foreach (var knob in tableKnobs)
+        {
+            if (knob != null)
+        {
+            // We find the 'interactable' component on the knob and disable it
+            var interactable = knob.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable>();
+            if (interactable != null)
+            {
+                interactable.enabled = !isRunning; 
+            }
+        }
+        }
     }
 
     public void EmergencyStop()
