@@ -6,8 +6,8 @@ public class RPMManager : XRSubject<RPMData>, IAmXRObserver<AxisData>
 {
     //Checks the positions of the 45degree dials to form the RPM for the drill
 
-    [SerializeField] XRSubject<AxisData> topRPMDial;
-    [SerializeField] XRSubject<AxisData> bottomRPMDial;
+    [Tooltip("Dial with only 2 posiible values")][SerializeField] XRSubject<AxisData> topRPMDial;
+    [Tooltip("Dial with 3 posible values")][SerializeField] XRSubject<AxisData> bottomRPMDial;
     
 
     int topInput;
