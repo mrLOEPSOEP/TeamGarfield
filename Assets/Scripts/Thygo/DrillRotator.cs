@@ -15,6 +15,8 @@ public class DrillRotator : MonoBehaviour
             transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
         }
     }
+    //For the accuracy manager to know if the machine is actually running
+    public bool IsMachineRunning() => isRunning;
 
     //Call this in the start drill button
     public void ToggleDrill()

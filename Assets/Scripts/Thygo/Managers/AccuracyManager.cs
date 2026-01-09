@@ -78,6 +78,15 @@ IAmXRObserver<RPMData>
         //Find what the best configuration of the machine is for example 770
         int bestPossibleConfig = GetClosestAvailableRPM(targetIdeal);
 
+        // Find the rotation script
+        DrillRotator rotation = FindFirstObjectByType<DrillRotator>();
+        
+        // If the machine isn't even turned on, they get 0 points!
+        if (rotation != null && !rotation.IsMachineRunning()) 
+        {
+            return 0f; 
+        }
+
         if (bestPossibleConfig == 0 || currentRPM == 0) return 0f;
 
         float rpmDifference = Mathf.Abs(currentRPM - bestPossibleConfig);
