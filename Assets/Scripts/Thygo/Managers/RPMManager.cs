@@ -2,7 +2,7 @@ using System;
 using Unity.VRTemplate;
 using UnityEngine;
 
-public class RPMManager : Subject<RPMData>, IAmXRObserver<AxisData>
+public class RPMManager : XRSubject<RPMData>, IAmXRObserver<AxisData>
 {
     //Checks the positions of the 45degree dials to form the RPM for the drill
 
@@ -23,8 +23,8 @@ public class RPMManager : Subject<RPMData>, IAmXRObserver<AxisData>
 
     int[,] rpmTable = new int[2,3]
     {
-        {640,   440,    150},
-        {770,   530,    180}
+        {640,   1280,    440},
+        {770,   1540,    530}
     };
 
     public void OnNotify(XRSubject<AxisData> sender, AxisData data)
@@ -43,7 +43,7 @@ public class RPMManager : Subject<RPMData>, IAmXRObserver<AxisData>
 
         currentRPM = rpmTable[topInput, bottomInput];
         
-        NotifyObservers(new RPMData{RPMCurrent = currentRPM});
+        NotifyObservers(this, new RPMData{RPMCurrent = currentRPM});
     }
 
     int GetIndexFromFloat(float value)
@@ -51,6 +51,12 @@ public class RPMManager : Subject<RPMData>, IAmXRObserver<AxisData>
         if (value < .25f) return 0; //Left position
         if (value < .75f) return 1; //middle pos
         return 2;                   //Right pos
+    }
+
+    //To allow the AccuracyManager to read the rpmTable
+    public int GetRPMTableValue(int row, int column)
+    {
+        return rpmTable[row, column];
     }
 
 }
