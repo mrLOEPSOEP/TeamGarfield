@@ -23879,6 +23879,7 @@ MonoBehaviour:
   crankY: {fileID: 0}
   crankZ: {fileID: 0}
   plate: {fileID: 647067998}
+  drillRotator: {fileID: 0}
   scaleValue: 0
   clampX: 1
   clampY: 1
@@ -42890,6 +42891,7 @@ MonoBehaviour:
   crankY: {fileID: 1180349854}
   crankZ: {fileID: 0}
   plate: {fileID: 1034691949}
+  drillRotator: {fileID: 0}
   scaleValue: 0.3
   clampX: 1
   clampY: 1
@@ -92373,6 +92375,7 @@ MonoBehaviour:
   crankY: {fileID: 0}
   crankZ: {fileID: 7815205}
   plate: {fileID: 1910671774}
+  drillRotator: {fileID: 0}
   scaleValue: 0.2
   clampX: 0.5
   clampY: 0.5
@@ -107025,6 +107028,7 @@ MonoBehaviour:
   crankY: {fileID: 0}
   crankZ: {fileID: 0}
   plate: {fileID: 1909616726}
+  drillRotator: {fileID: 0}
   scaleValue: 0.1
   clampX: 0.3
   clampY: 1
