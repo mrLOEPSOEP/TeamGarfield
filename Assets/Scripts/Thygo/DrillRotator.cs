@@ -32,7 +32,7 @@ public class DrillRotator : MonoBehaviour
             var interactable = knob.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable>();
             if (interactable != null)
             {
-                interactable.enabled = !isRunning; 
+                interactable.enabled = !isRunning;
             }
         }
         }

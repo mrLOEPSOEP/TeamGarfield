@@ -6,32 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b6106fb1-42b9-4b9f-af51-49233d882f67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamGarfield/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamGarfield/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/5ba172d8e2672d2caca285446dede657.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/5ba172d8e2672d2caca285446dede657.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Copper.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Copper.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Grass.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Grass.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Materials/Tree1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Materials/Tree1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Materials/Tree2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Materials/Tree2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Materials/tree-8239.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Materials/tree-8239.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Materials/tree-8242.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Materials/tree-8242.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Steel.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Steel.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/WindowApartment.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/WindowApartment.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/WindowTransparent.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/WindowTransparent.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/copper_texture.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/copper_texture.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/photo-1524893829393-a74a8c51c635 (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/photo-1524893829393-a74a8c51c635 (1).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/stainless-steel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/stainless-steel.jpg.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +22,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Kelvin/DrillBitSpecs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Kelvin/Steel.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@76258c00be3e/Runtime/Utilities/TeleportationMonitor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -146,6 +121,7 @@
       <workItem from="1767606105529" duration="151000" />
       <workItem from="1767716847197" duration="8000" />
       <workItem from="1767867223215" duration="2398000" />
+      <workItem from="1768130056430" duration="3425000" />
     </task>
     <servers />
   </component>
