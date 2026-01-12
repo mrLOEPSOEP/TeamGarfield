@@ -32,7 +32,16 @@ public class DrillRotator : MonoBehaviour
             var interactable = knob.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable>();
             if (interactable != null)
             {
-                interactable.enabled = !isRunning; 
+                if (isRunning)
+                    {
+                        //Don't allow the knob to be interactable 0 = nothing in the layer mask
+                        interactable.interactionLayers = 0;
+                    }
+                    else
+                    {
+                        //Set the layermask to be default again by setting to 1
+                        interactable.interactionLayers = 1;
+                    }
             }
         }
         }
@@ -40,6 +49,9 @@ public class DrillRotator : MonoBehaviour
 
     public void EmergencyStop()
     {
-        isRunning = false;
+        if (isRunning)
+        {
+            ToggleDrill();
+        }
     }
 }
