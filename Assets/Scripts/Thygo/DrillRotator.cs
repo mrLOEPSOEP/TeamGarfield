@@ -13,7 +13,7 @@ public class DrillRotator : MonoBehaviour
         {
             float targetVelocity = isRunning ? (rpmManager.currentRPM * 6f) : 0f;
             rotationSpeed = Mathf.Lerp(rotationSpeed, targetVelocity, Time.deltaTime * 2f);
-            transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.down * rotationSpeed * Time.deltaTime);
         }
     }
     //For the accuracy manager to know if the machine is actually running
