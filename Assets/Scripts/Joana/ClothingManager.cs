@@ -9,6 +9,7 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
     [SerializeField] SafetySocketSubject safetyShoesSocket;
     [SerializeField] SafetySocketSubject safetyGloveLeft;
     [SerializeField] SafetySocketSubject safetyGloveRight;
+    [SerializeField] SafetySocketSubject phoneSocket;
     
     [Header("DrillRoomTeleport")]
     [SerializeField] GameObject TeleportPosition;
@@ -19,6 +20,7 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
     public bool safetyShoes { get; private set; }
     public bool leftGlove { get; private set; }
     public bool rightGlove { get; private set; }
+    public bool phone { get; private set; }
 
     void Start()
     {
@@ -28,6 +30,7 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         if (safetyShoesSocket != null)      {safetyShoesSocket.AddObserver(this);}
         if (safetyGloveLeft != null)        {safetyGloveLeft.AddObserver(this);}
         if (safetyGloveRight != null)       {safetyGloveRight.AddObserver(this);}
+        if (phoneSocket != null)            {phoneSocket.AddObserver(this);}
     }
 
     private void Awake()
@@ -49,9 +52,10 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         if (sender == safetyGlassesSocket) safetyGlasses = data.isPresent;
         if (sender == safetyShoesSocket) safetyShoes = data.isPresent;
 
-        //Track the gloves that may not be there
+        //Track the things that may not be there
         if (sender == safetyGloveLeft) leftGlove = data.isPresent;
         if (sender == safetyGloveRight) rightGlove = data.isPresent;
+        if (sender == phoneSocket)      phone = data.isPresent;
 
         //Check if all conditions are met
         if (HasAllRequiredClothing())
@@ -77,8 +81,9 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
     {
         bool glovesCheckLeft = (safetyGloveLeft != null) || safetyGloveLeft;
         bool glovesCheckRight = (safetyGloveRight != null) || safetyGloveRight;
+        bool phoneCheck = (phoneSocket != null) || phone;
 
-        return glovesCheckLeft || glovesCheckRight;
+        return glovesCheckLeft || glovesCheckRight || phone;
     }
 
     void TeleportToDrillingRoom()

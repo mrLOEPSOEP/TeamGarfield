@@ -7,7 +7,8 @@ public enum EquipmentType // to be able to select the equipment type
     Jumpsuit,
     SafetyGlasses,
     SafetyShoes,
-    Gloves
+    Gloves,
+    Phone
 }
 public class SafetyEquipment : MonoBehaviour
 {
