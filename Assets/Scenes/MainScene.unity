@@ -12746,7 +12746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LazyTooltip: {fileID: 854315356}
   m_Curve: {fileID: 0}
-  m_DwellTime: 1
+  m_DwellTime: 0
   m_Unparent: 0
   m_TurnOffAtStart: 1
 --- !u!1001 &338432245
@@ -14637,7 +14637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LazyTooltip: {fileID: 970603004}
   m_Curve: {fileID: 0}
-  m_DwellTime: 1
+  m_DwellTime: 0
   m_Unparent: 0
   m_TurnOffAtStart: 1
 --- !u!1 &434277756
@@ -19202,31 +19202,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3427622684821028259, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0343
+      value: -0.010921729
       objectReference: {fileID: 0}
     - target: {fileID: 3427622684821028259, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0028
+      value: 0.0071109287
       objectReference: {fileID: 0}
     - target: {fileID: 3427622684821028259, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0246
+      value: 0.024285452
       objectReference: {fileID: 0}
     - target: {fileID: 3427622684821028259, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9825338
+      value: -0.87223274
       objectReference: {fileID: 0}
     - target: {fileID: 3427622684821028259, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.11088333
+      value: -0.164291
       objectReference: {fileID: 0}
     - target: {fileID: 3427622684821028259, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.14900005
+      value: -0.45595968
       objectReference: {fileID: 0}
     - target: {fileID: 3427622684821028259, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.011450573
+      value: 0.06572094
       objectReference: {fileID: 0}
     - target: {fileID: 3427622684821028259, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -19332,6 +19332,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5189730410512847024, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0089
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189730410512847024, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0131
+      objectReference: {fileID: 0}
     - target: {fileID: 6233225546449101457, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_IgnoreX
       value: 1
@@ -19342,15 +19350,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7483466262065638349, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0364
+      value: -0.01092173
       objectReference: {fileID: 0}
     - target: {fileID: 7483466262065638349, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0.0071109287
       objectReference: {fileID: 0}
     - target: {fileID: 7483466262065638349, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.02236
+      value: 0.024285449
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483466262065638349, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.8722326
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483466262065638349, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.16429104
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483466262065638349, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.45595998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483466262065638349, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.065721
       objectReference: {fileID: 0}
     - target: {fileID: 7785151267555267963, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -41544,10 +41568,34 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2120223110}
+        m_TargetAssemblyTypeName: Unity.VRTemplate.Callout, Assembly-CSharp
+        m_MethodName: GazeHoverStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2120223110}
+        m_TargetAssemblyTypeName: Unity.VRTemplate.Callout, Assembly-CSharp
+        m_MethodName: GazeHoverEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -41562,10 +41610,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2120223110}
+        m_TargetAssemblyTypeName: Unity.VRTemplate.Callout, Assembly-CSharp
+        m_MethodName: GazeHoverStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2120223110}
+        m_TargetAssemblyTypeName: Unity.VRTemplate.Callout, Assembly-CSharp
+        m_MethodName: GazeHoverEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -54483,7 +54555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LazyTooltip: {fileID: 1541876877}
   m_Curve: {fileID: 0}
-  m_DwellTime: 1
+  m_DwellTime: 0
   m_Unparent: 0
   m_TurnOffAtStart: 1
 --- !u!1 &1238095572
@@ -63032,7 +63104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LazyTooltip: {fileID: 216580788}
   m_Curve: {fileID: 0}
-  m_DwellTime: 1
+  m_DwellTime: 0
   m_Unparent: 0
   m_TurnOffAtStart: 1
 --- !u!4 &1351324115 stripped
@@ -72615,7 +72687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LazyTooltip: {fileID: 1042668375}
   m_Curve: {fileID: 0}
-  m_DwellTime: 1
+  m_DwellTime: 0
   m_Unparent: 0
   m_TurnOffAtStart: 1
 --- !u!1 &1459586314
@@ -114168,7 +114240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LazyTooltip: {fileID: 6869935333929709571}
   m_Curve: {fileID: 0}
-  m_DwellTime: 1
+  m_DwellTime: 0
   m_Unparent: 0
   m_TurnOffAtStart: 1
 --- !u!1 &2941280593410126224
@@ -114183,6 +114255,7 @@ GameObject:
   - component: {fileID: 997954372483521564}
   - component: {fileID: 98457578599163162}
   - component: {fileID: 6437938465281314542}
+  - component: {fileID: 6437938465281314543}
   m_Layer: 0
   m_Name: shield
   m_TagString: Untagged
@@ -117065,6 +117138,28 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
+--- !u!64 &6437938465281314543
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941280593410126224}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1117082489390005245, guid: 5e5fd242b7fa5e84395cc4e881781fbe, type: 3}
 --- !u!1 &6444089465603988922
 GameObject:
   m_ObjectHideFlags: 0
