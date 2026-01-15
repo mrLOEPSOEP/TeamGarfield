@@ -18509,17 +18509,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 543450652994409647}
     m_Modifications:
+    - target: {fileID: 377291013443947822, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
+      propertyPath: m_MaxDistance
+      value: 0.035
+      objectReference: {fileID: 0}
     - target: {fileID: 1811122272821274886, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0000000707271
+      value: 0.00000008438867
       objectReference: {fileID: 0}
     - target: {fileID: 1811122272821274886, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.11001757
+      value: 0.08556925
       objectReference: {fileID: 0}
     - target: {fileID: 1811122272821274886, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.000000058915507
+      value: 0.00000004582317
       objectReference: {fileID: 0}
     - target: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_LocalScale.x
@@ -18579,7 +18583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
@@ -18612,7 +18616,7 @@ PrefabInstance:
     - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1915695718}
+      objectReference: {fileID: 52879953}
     - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -18655,7 +18659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleDrill
+      value: GazeHoverEnd
       objectReference: {fileID: 0}
     - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -18691,7 +18695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DrillRotator, Assembly-CSharp
+      value: Unity.VRTemplate.Callout, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -56573,7 +56577,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3933869456315532117}
+  - {fileID: 929609006435097171}
   m_Father: {fileID: 927810206}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1263046203
@@ -71225,13 +71229,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414854510}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -7.105424e-15, z: 0.000000042146834, w: 1}
-  m_LocalPosition: {x: 0.00597, y: -0, z: 0.00885}
+  m_LocalRotation: {x: 0.7071068, y: 0.0000002763911, z: 0.00000009058592, w: 0.7071067}
+  m_LocalPosition: {x: 0.00597, y: -0, z: 0.00682}
   m_LocalScale: {x: 0.19, y: 0.19, z: 0.19}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1654932493}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1420354853
 GameObject:
   m_ObjectHideFlags: 0
@@ -79529,8 +79533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629c76f6275ee7446a2444e2d36e71c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccuracyManager
-  materialSocket: {fileID: 1485454660}
-  drillBitSocket: {fileID: 1726641654}
+  materialSocket: {fileID: 1654932494}
+  drillBitSocket: {fileID: 1915695719}
   rpmManager: {fileID: 1748355789}
 --- !u!43 &1594179847
 Mesh:
@@ -112509,7 +112513,7 @@ Transform:
   - {fileID: 204134101}
   - {fileID: 1427603171}
   - {fileID: 927810206}
-  - {fileID: 929609006435097171}
+  - {fileID: 3933869456315532117}
   - {fileID: 311269531}
   - {fileID: 7967766325509245092}
   - {fileID: 4865064390904054443}
@@ -112765,12 +112769,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3542453455217884896}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalRotation: {x: -0.00000017881392, y: -0.000000029802319, z: 0.70963985, w: 0.70456475}
+  m_LocalPosition: {x: -12.100808, y: 2.4197257, z: -31.169224}
+  m_LocalScale: {x: 1864.9681, y: 1864.968, z: 1864.968}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 543450652994409647}
+  m_Father: {fileID: 1253216834}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &955749145046253518
 MeshRenderer:
@@ -115186,12 +115190,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4173390656146051795}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000017881392, y: -0.000000029802319, z: 0.70963985, w: 0.70456475}
-  m_LocalPosition: {x: -12.100808, y: 2.4197257, z: -31.169224}
-  m_LocalScale: {x: 1864.9681, y: 1864.968, z: 1864.968}
+  m_LocalRotation: {x: -0.7071068, y: 0.000000059604623, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1253216834}
+  m_Father: {fileID: 543450652994409647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3975376454415642388
 GameObject:

@@ -1,11 +1,17 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Attachment;
 
 public class DrillRotator : MonoBehaviour
 {
     [SerializeField] UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable[] tableKnobs;
     [SerializeField] RPMManager rpmManager;
-    bool isRunning;
+    bool isRunning = true;
     float rotationSpeed;
+
+    void Awake() 
+    {
+        ToggleDrill();
+    }
 
     void Update()
     {
@@ -27,23 +33,23 @@ public class DrillRotator : MonoBehaviour
         foreach (var knob in tableKnobs)
         {
             if (knob != null)
-        {
-            // We find the 'interactable' component on the knob and disable it
-            var interactable = knob.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable>();
-            if (interactable != null)
             {
-                if (isRunning)
-                    {
-                        //Don't allow the knob to be interactable 0 = nothing in the layer mask
-                        interactable.interactionLayers = 0;
-                    }
-                    else
-                    {
-                        //Set the layermask to be default again by setting to 1
-                        interactable.interactionLayers = 1;
-                    }
+                // We find the 'interactable' component on the knob and disable it
+                var interactable = knob.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable>();
+                if (interactable != null)
+                {
+                    if (isRunning)
+                        {
+                            //Don't allow the knob to be interactable 0 = nothing in the layer mask
+                            interactable.interactionLayers = 0;
+                        }
+                        else
+                        {
+                            //Set the layermask to be default again by setting to 1
+                            interactable.interactionLayers = 1;
+                        }
+                }
             }
-        }
         }
     }
 
