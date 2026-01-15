@@ -6,7 +6,8 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
     
     [SerializeField] SafetySocketSubject jumpSuitSocket;    
     [SerializeField] SafetySocketSubject safetyGlassesSocket;
-    [SerializeField] SafetySocketSubject safetyShoesSocket;
+    [SerializeField] SafetySocketSubject safetyShoesSocketLeft;
+    [SerializeField] SafetySocketSubject safetyShoesSocketRight;
     [SerializeField] SafetySocketSubject safetyGloveLeft;
     [SerializeField] SafetySocketSubject safetyGloveRight;
     [SerializeField] SafetySocketSubject phoneSocket;
@@ -17,7 +18,8 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
 
     public bool jumpsuit { get; private set; }
     public bool safetyGlasses { get; private set; }
-    public bool safetyShoes { get; private set; }
+    public bool safetyShoeLeft { get; private set; }
+    public bool safetyShoeRight { get; private set; }
     public bool leftGlove { get; private set; }
     public bool rightGlove { get; private set; }
     public bool phone { get; private set; }
@@ -27,7 +29,8 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         //Formatted like this to keep the code more confined. this does the same as going under it every line adds one observer
         if (jumpSuitSocket != null)         {jumpSuitSocket.AddObserver(this);}
         if (safetyGlassesSocket != null)    {safetyGlassesSocket.AddObserver(this);}
-        if (safetyShoesSocket != null)      {safetyShoesSocket.AddObserver(this);}
+        if (safetyShoesSocketLeft != null)      {safetyShoesSocketLeft.AddObserver(this);}
+        if (safetyShoesSocketRight != null)      {safetyShoesSocketRight.AddObserver(this);}
         if (safetyGloveLeft != null)        {safetyGloveLeft.AddObserver(this);}
         if (safetyGloveRight != null)       {safetyGloveRight.AddObserver(this);}
         if (phoneSocket != null)            {phoneSocket.AddObserver(this);}
@@ -50,7 +53,8 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         //Track things that have to be there
         if (sender == jumpSuitSocket) jumpsuit = data.isPresent;
         if (sender == safetyGlassesSocket) safetyGlasses = data.isPresent;
-        if (sender == safetyShoesSocket) safetyShoes = data.isPresent;
+        if (sender == safetyShoesSocketLeft) safetyShoeLeft = data.isPresent;
+        if (sender == safetyShoesSocketRight) safetyShoeRight = data.isPresent;
 
         //Track the things that may not be there
         if (sender == safetyGloveLeft) leftGlove = data.isPresent;
@@ -69,12 +73,13 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         //If a socket is assigned we check the value otherwise treat it as true
         bool glassesCheck = (safetyGlassesSocket == null) || safetyGlasses;
         bool jumpsuitCheck = (jumpSuitSocket == null) || jumpsuit;
-        bool shoesCheck = (safetyShoesSocket == null) || safetyShoes;
+        bool shoesCheckLeft = (safetyShoesSocketLeft == null) || safetyShoeLeft;
+        bool shoesCheckRight = (safetyShoesSocketRight == null) || safetyShoeRight;
 
         bool noForbiddenItemsPresent = !HasForbiddenClothes();
 
 
-        return glassesCheck && jumpsuitCheck && shoesCheck && noForbiddenItemsPresent;
+        return glassesCheck && jumpsuitCheck && shoesCheckLeft && noForbiddenItemsPresent && shoesCheckRight;
     }
 
     bool HasForbiddenClothes()
@@ -83,7 +88,7 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         bool glovesCheckRight = (safetyGloveRight != null) || safetyGloveRight;
         bool phoneCheck = (phoneSocket != null) || phone;
 
-        return glovesCheckLeft || glovesCheckRight || phone;
+        return glovesCheckLeft || glovesCheckRight || phoneCheck;
     }
 
     void TeleportToDrillingRoom()
