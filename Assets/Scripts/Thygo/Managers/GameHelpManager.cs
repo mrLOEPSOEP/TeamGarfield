@@ -114,7 +114,7 @@ public class GameHelpManager : MonoBehaviour, IAmObserver<ButtonType>
     {
         if (startMachineUI != null)startMachineUI.text     = startMachineTextEnglish;
         if (emergenyStopUI != null)emergenyStopUI.text     = emergenyStopTextEnglish;
-        if (drillSpeedKnobUI != null)drillSpeedKnobUI.text   = drillBitTextEnglish;
+        if (drillSpeedKnobUI != null)drillSpeedKnobUI.text   = drillSpeedKnobTextEnglish;
         if (materialClampUI != null)materialClampUI.text    = materialClampTextEnglish;
         if (shieldUI != null)shieldUI.text           = shieldTextEnglish;
         if (drillBitUI != null)drillBitUI.text         = drillBitTextEnglish;
@@ -129,7 +129,7 @@ public class GameHelpManager : MonoBehaviour, IAmObserver<ButtonType>
     {
         if (startMachineUI != null)startMachineUI.text     = startMachineTextDutch;
         if (emergenyStopUI != null)emergenyStopUI.text     = emergenyStopTextDutch;
-        if (drillSpeedKnobUI != null)drillSpeedKnobUI.text   = drillBitTextDutch;
+        if (drillSpeedKnobUI != null)drillSpeedKnobUI.text   = drillSpeedKnobTextDutch;
         if (materialClampUI != null)materialClampUI.text    = materialClampTextDutch;
         if (shieldUI != null)shieldUI.text           = shieldTextDutch;
         if (drillBitUI != null)drillBitUI.text         = drillBitTextDutch;
