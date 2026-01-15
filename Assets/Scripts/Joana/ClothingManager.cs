@@ -62,16 +62,14 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         if (sender == phoneSocket)      phone = data.isPresent;
 
         //Check if all conditions are met
-        if (HasForbiddenClothes() == false)
-            {
-                if (HasAllRequiredClothing())
-                {
-                    TeleportToDrillingRoom();
-                    Debug.Log("all conditions met");
-                }
-            }
-        Debug.Log("has forbidden clothes: " + HasForbiddenClothes());
-        Debug.Log("has required clothes: " + HasAllRequiredClothing());
+        
+        if (HasAllRequiredClothing())
+        {
+            TeleportToDrillingRoom();
+            Debug.Log("all conditions met");
+        }
+        Debug.Log("Has forbidden: " + HasForbiddenClothes());
+        Debug.Log("All required: " + HasAllRequiredClothing());
         
     }
     public bool HasAllRequiredClothing()
@@ -82,18 +80,18 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
         bool shoesCheckLeft = (safetyShoesSocketLeft == null) || safetyShoeLeft;
         bool shoesCheckRight = (safetyShoesSocketRight == null) || safetyShoeRight;
 
-        bool noForbiddenItemsPresent = HasForbiddenClothes();
-        Debug.Log(noForbiddenItemsPresent);
+        bool noForbiddenItemsPresent = !HasForbiddenClothes();
+        Debug.Log("noforbiddenitemsprenest: " + noForbiddenItemsPresent);
 
 
-        return glassesCheck && jumpsuitCheck && shoesCheckLeft && shoesCheckRight;
+        return glassesCheck && jumpsuitCheck && shoesCheckLeft && shoesCheckRight && noForbiddenItemsPresent;
     }
 
     bool HasForbiddenClothes()
     {
-        bool glovesCheckLeft = (safetyGloveLeft != null) || leftGlove;
-        bool glovesCheckRight = (safetyGloveRight != null) || rightGlove;
-        bool phoneCheck = (phoneSocket != null) || phone;
+        bool glovesCheckLeft = leftGlove;
+        bool glovesCheckRight = rightGlove;
+        bool phoneCheck = phone;
 
         return glovesCheckLeft || glovesCheckRight || phoneCheck;
     }
