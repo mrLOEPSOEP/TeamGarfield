@@ -36,8 +36,7 @@ public class PlateMoveAxis : MonoBehaviour, IAmXRObserver<AxisData>
 
     public void OnNotify(XRSubject<AxisData> sender, AxisData axisData)
     {
-        if(drillRotator != null && drillRotator.IsMachineRunning())
-        {
+        
             float currentCrankValue = axisData.axisRotateValue;
             float lastCrankValue;
             bool isFirstNotification = false; //A flag so position won't be updated at the start of the game
@@ -83,7 +82,7 @@ public class PlateMoveAxis : MonoBehaviour, IAmXRObserver<AxisData>
             }
             
             plate.transform.localPosition = platePosition;
-        }
+        
     }
 
     void OnEnable()

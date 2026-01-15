@@ -5,13 +5,9 @@ public class DrillRotator : MonoBehaviour
 {
     [SerializeField] UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable[] tableKnobs;
     [SerializeField] RPMManager rpmManager;
-    bool isRunning = true;
+    bool isRunning;
     float rotationSpeed;
 
-    void Awake() 
-    {
-        ToggleDrill();
-    }
 
     void Update()
     {
@@ -41,12 +37,12 @@ public class DrillRotator : MonoBehaviour
                     if (isRunning)
                         {
                             //Don't allow the knob to be interactable 0 = nothing in the layer mask
-                            interactable.interactionLayers = 0;
+                            interactable.enabled = false;
                         }
                         else
                         {
-                            //Set the layermask to be default again by setting to 1
-                            interactable.interactionLayers = 1;
+                            //Set the layermask to be default again by setting to 2
+                            interactable.enabled = true;
                         }
                 }
             }
