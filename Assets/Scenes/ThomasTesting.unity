@@ -1340,8 +1340,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Now you can finally start the drill by pressing the green button. If anything
-    goes wrong u press the emergency button.
+  m_text: Nu kan je de drill eindelijk starten door op de groene knop te drukken.
+    Als er iets misgaat, drukt je op de noodknop.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -4148,8 +4148,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Depending on the material u can change the drillspeed with the dial its
-    on the right of the start button '
+  m_text: Afhankelijk van het materiaal kan je de boorsnelheid aanpassen met de draaiknop
+    rechts van de startknop.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -5647,8 +5647,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use the crank to make sure the drill goes back up again. Put the dial in
-    the middle again if you changed the drill speed.
+  m_text: Gebruik de draaiwiel om ervoor te zorgen dat de boor weer omhoog gaat.
+    Zet de draaiknop weer in de middelste stand als je de boorsnelheid hebt aangepast.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -6040,6 +6040,7 @@ GameObject:
   - component: {fileID: 443696774}
   - component: {fileID: 443696773}
   - component: {fileID: 443696772}
+  - component: {fileID: 443696775}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -6110,7 +6111,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 443696773}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 443696775}
+        m_TargetAssemblyTypeName: delayUI, Assembly-CSharp
+        m_MethodName: HideUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &443696773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6149,6 +6162,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443696770}
   m_CullTransparentMesh: 1
+--- !u!114 &443696775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443696770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b818560fb4bd2a04abde6f8c477e1ba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::delayUI
+  UIpopup: {fileID: 7399771467524844383}
 --- !u!1 &460750761
 GameObject:
   m_ObjectHideFlags: 0
@@ -6221,8 +6247,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Secondy u should check if the drillbit is in correctly and if the shield
-    is correctly in front of the drillbit.
+  m_text: Ten tweede moet je controleren of de boor correct is geplaatst en of de
+    beschermkap zich correct voor de drillbit bevindt.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -12794,9 +12820,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: First you put the material in the clamp. Make sure the table is set correctly
-    under where you want to drill into the material. You can do this by turning the
-    crank on either side of the table.
+  m_text: Plaats eerst het materiaal in de klem. Zorg ervoor dat de tafel correct
+    is gepositioneerd onder de plek waar je in het materiaal wilt boren. Dit kan
+    je doen door aan de Draaiwiel aan beide zijden van de tafel te draaien.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -13780,8 +13806,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Now press the start button again to turn it off. You are done now Great
-    job
+  m_text: Druk nu nogmaals op de startknop om het apparaat uit te schakelen. Je bent
+    klaar! Goed gedaan!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -14680,8 +14706,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Now u can use the crank on the top left of the machine to lower the drill
-    slowly to drill into the material.
+  m_text: Nu kan je met het draaiwiel linksboven op de machine gebruiken om de boor
+    langzaam te laten zakken en zo in het materiaal te boren.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -26556,7 +26582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2095755740
 MonoBehaviour:
   m_ObjectHideFlags: 0

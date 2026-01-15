@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b6106fb1-42b9-4b9f-af51-49233d882f67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamGarfield/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamGarfield/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Materials/Trees/Tree1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model Assets/Kelvin/Materials/Trees/Tree1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Thygo/ObserverPattern/DrillBitSocketSubject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Thygo/ObserverPattern/DrillBitSocketSubject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThomasTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ThomasTesting.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +39,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "Reverting in main",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,7 +50,7 @@
 }]]></component>
   <component name="RunManager" selected="Standalone Player.Start Unity">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.7f2\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.7f2-x86_64\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\terra\Documents\GitHub\TeamGarfield -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\terra\Documents\GitHub\TeamGarfield" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -61,7 +60,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.7f2\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.7f2-x86_64\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\terra\Documents\GitHub\TeamGarfield -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\terra\Documents\GitHub\TeamGarfield" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -124,6 +123,8 @@
       <workItem from="1767716847197" duration="8000" />
       <workItem from="1767867223215" duration="2398000" />
       <workItem from="1768214003115" duration="1634000" />
+      <workItem from="1768491111147" duration="694000" />
+      <workItem from="1768492349868" duration="48000" />
     </task>
     <servers />
   </component>
