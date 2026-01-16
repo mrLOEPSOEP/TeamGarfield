@@ -125886,6 +125886,8 @@ MonoBehaviour:
   guidanceText: {fileID: 2119818357}
   practiceText: {fileID: 1147477611}
   challengeText: {fileID: 229998059}
+  tutorialWindowEnglish: {fileID: 697007845}
+  tutorialWindowDutch: {fileID: 1913429380}
 --- !u!1001 &1957966070
 PrefabInstance:
   m_ObjectHideFlags: 0
