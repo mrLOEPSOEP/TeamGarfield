@@ -1069,6 +1069,10 @@ PrefabInstance:
       propertyPath: m_PhysicsLayerMask.m_Bits
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: 6232745470614056090, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_Height
+      value: 1.47
+      objectReference: {fileID: 0}
     - target: {fileID: 6436123941575367715, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_PhysicsLayerMask.m_Bits
       value: 65
@@ -33713,6 +33717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 627739284}
+  - component: {fileID: 627739285}
   m_Layer: 0
   m_Name: AnvilMoveWhole
   m_TagString: Untagged
@@ -33737,6 +33742,27 @@ Transform:
   - {fileID: 1571984683}
   m_Father: {fileID: 204134101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &627739285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627739283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8219e60c1a4ee794aa4f1ad943df2db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlateMoveAxis
+  crankX: {fileID: 1571984684}
+  crankY: {fileID: 0}
+  crankZ: {fileID: 0}
+  plate: {fileID: 627739283}
+  drillRotator: {fileID: 0}
+  scaleValue: 0.3
+  clampX: 0.4
+  clampY: 1
+  clampZ: 1
 --- !u!1 &631820291
 GameObject:
   m_ObjectHideFlags: 0
@@ -123506,7 +123532,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DrillRotator
   tableKnobs:
-  - {fileID: 1685739401}
   - {fileID: 503747335}
   - {fileID: 852196837}
   - {fileID: 1571984684}
@@ -138588,9 +138613,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2310409205775115730}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071069, y: -0, z: -0.000000029802319, w: 0.70710677}
+  m_LocalRotation: {x: -0.7071069, y: 0.000000029802319, z: -0.000000029802319, w: 0.70710677}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 99.999985, z: 99.99998}
+  m_LocalScale: {x: 100, y: 100, z: 99.999985}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1654932493}
@@ -142161,7 +142186,6 @@ GameObject:
   - component: {fileID: 3840801771569415243}
   - component: {fileID: 2179004018594923754}
   - component: {fileID: 4815317145665780733}
-  - component: {fileID: 6855320572302349407}
   - component: {fileID: 6855320572302349406}
   m_Layer: 0
   m_Name: AnvilMovePlate
@@ -142242,27 +142266,6 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
---- !u!114 &6855320572302349407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6855320572302349405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8219e60c1a4ee794aa4f1ad943df2db4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlateMoveAxis
-  crankX: {fileID: 1571984684}
-  crankY: {fileID: 0}
-  crankZ: {fileID: 0}
-  plate: {fileID: 6855320572302349405}
-  drillRotator: {fileID: 0}
-  scaleValue: 0.3
-  clampX: 1
-  clampY: 1
-  clampZ: 1
 --- !u!33 &6862522419379605340
 MeshFilter:
   m_ObjectHideFlags: 0
