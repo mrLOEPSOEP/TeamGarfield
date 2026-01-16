@@ -20,7 +20,10 @@ public class MenuManager : MonoBehaviour, IAmObserver<ButtonType>
     [Header("Textfields of the buttons")]
     [SerializeField] TMP_Text guidanceText;
     [SerializeField] TMP_Text practiceText;    
-    [SerializeField] TMP_Text challengeText;    
+    [SerializeField] TMP_Text challengeText;   
+    [Header("Tutorial window references")]
+    [SerializeField] GameObject tutorialWindowEnglish;
+    [SerializeField] GameObject tutorialWindowDutch;
     
 
     
@@ -42,6 +45,14 @@ public class MenuManager : MonoBehaviour, IAmObserver<ButtonType>
         }   
         //GetButtons();
         SetLanguage();
+
+        if (value != ButtonType.Challenge)
+        {
+            if (languageIsDutch)
+            {tutorialWindowDutch.SetActive(true);}
+            else
+            {tutorialWindowEnglish.SetActive(true);}
+        }
     }
 
     /*/void GetButtons()
