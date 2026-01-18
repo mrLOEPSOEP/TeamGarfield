@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class AccuracyManager : MonoBehaviour,
 IAmXRObserver<MaterialTypeData>,
@@ -13,11 +14,19 @@ IAmXRObserver<RPMData>
     string currentMaterial;
     float currentBitSize;
     int currentRPM;
+    float rpmAccuracyScore;
+    float alignmentScore;
+    float totalScore;
+    Transform currentActiveTip;
 
     [Header("Subjects to subscribe to")]
     [SerializeField] MaterialSocketSubject materialSocket;
     [SerializeField] DrillBitSocketSubject drillBitSocket;
     [SerializeField] RPMManager rpmManager;
+    [SerializeField] DrillTarget drillTarget;
+
+    [Header("Values")]
+    [Tooltip("Errormargin in distance for how far the drill can be off target")][SerializeField] float maxDistance = .03f;
 
     void Start()
     {
@@ -37,6 +46,8 @@ IAmXRObserver<RPMData>
     public void OnNotify(XRSubject<DrillBitData> sender, DrillBitData data)
     {
         currentBitSize = data.isPresent ? data.size : 0f;
+
+        currentActiveTip = data.isPresent ? data.tipLocation : null;
         DebugAllData();
     }
 
@@ -92,9 +103,9 @@ IAmXRObserver<RPMData>
         float rpmDifference = Mathf.Abs(currentRPM - bestPossibleConfig);
 
         //Calculate the score with decimals for the leaderboard/highscore table
-        float accuracyScore = Mathf.Max(0, 100f - (rpmDifference / (float)bestPossibleConfig * 100f));
+        rpmAccuracyScore = Mathf.Max(0, 100f - (rpmDifference / (float)bestPossibleConfig * 100f));
 
-        return accuracyScore;
+        return rpmAccuracyScore;
     } 
 
     int GetClosestAvailableRPM(int idealRPM)
@@ -117,5 +128,36 @@ IAmXRObserver<RPMData>
             }
         }
         return closestGear;
+    }
+
+    //To calculate the distance between the center of the target and the drillbit tip
+    public float GetAlignmentScore()
+    {
+        if (drillTarget == null) return 0f;
+
+        //Get world positions
+        Vector3 targetPos = drillTarget.targetPosition;
+        Vector3 bitPos = currentActiveTip.position;
+
+        //Calculate the 2D distance 
+        float distance = Vector2.Distance(new Vector2(targetPos.x, targetPos.z), new Vector2(bitPos.x, bitPos.z));
+
+        //Calculate how close the drill was to the target position and give it a place 0-100
+        alignmentScore = Mathf.Max(0, 100f * (1f - (distance / maxDistance)));
+
+        return alignmentScore;
+    }
+
+    //Calculating the final score
+    public float CalculateFinalScore()
+    {
+        float rpmScore = CalculateFloatScore();
+        float alignmentScore = GetAlignmentScore();
+
+        //Combine them using weights as aligning is more important than the correct rpm
+        totalScore = (rpmScore * .3f) + (alignmentScore * .7f);
+
+        //Return the rounded score
+        return Mathf.Clamp(totalScore, 0f, 100f);
     }
 }
