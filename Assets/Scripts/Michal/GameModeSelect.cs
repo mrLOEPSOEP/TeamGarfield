@@ -1,4 +1,4 @@
-using UnityEditor.SearchService;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -10,22 +10,22 @@ public class GameModeSelect : Subject<ButtonType>
     [SerializeField] GameObject menuManagerObject;
     [SerializeField] GameObject TeleportPosition; //can be removed when the locker room clothing game is finished
     [SerializeField] GameObject player; //can be removed when the locker room clothing game is finished
-    
-    
+
+
     //Functionality of the buttons
     public void OnGuidanceModeSelected()
     {
         NotifyObservers(ButtonType.Guidance);
         gameObject.SetActive(false);
         //TeleportToDrillingRoom();
-    }   
+    }
 
     public void OnPracticeModeSelected()
     {
         NotifyObservers(ButtonType.Practice);
         gameObject.SetActive(false);
         //TeleportToDrillingRoom();
-    } 
+    }
 
     public void OnChallengeModeSelected()
     {

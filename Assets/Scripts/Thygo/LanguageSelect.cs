@@ -1,4 +1,4 @@
-using UnityEditor.SearchService;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -9,7 +9,7 @@ public class LanguageSelect : Subject<ButtonType>
 {
     [SerializeField] GameObject menuManagerObject;
     [SerializeField] GameObject gameModeCanvas;
-    
+
 
     //Getting the gameModeSelection canvas and making sure it doesn't show up before we selected a language
     void Start()
@@ -24,13 +24,13 @@ public class LanguageSelect : Subject<ButtonType>
         NotifyObservers(ButtonType.English);
         gameObject.SetActive(false);
         gameModeCanvas.SetActive(true);
-    }   
+    }
 
     public void OnDutchSelected()
     {
         NotifyObservers(ButtonType.Dutch);
         gameObject.SetActive(false);
         gameModeCanvas.SetActive(true);
-    } 
+    }
 
 }
