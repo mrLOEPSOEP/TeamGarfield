@@ -59,6 +59,8 @@ public class LeaderboardManager : MonoBehaviour, IAmObserver<ButtonType>, IAmObs
 
         SaveNewScore(rankTitle, data.accuracyScore);
         UpdateResult(rankTitle, data.accuracyScore);
+
+        UpdateDisplay();
     }
 
     void UpdateResult(string title, float score)
