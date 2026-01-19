@@ -104,12 +104,13 @@ IAmXRObserver<RPMData>
             return 0f; 
         }
 
-        if (bestPossibleConfig == 0 || currentRPM == 0) return 0f;
-
         float rpmDifference = Mathf.Abs(currentRPM - bestPossibleConfig);
+        Debug.Log("rpmDiff = " + rpmDifference);
 
         //Calculate the score with decimals for the leaderboard/highscore table
-        rpmAccuracyScore = Mathf.Max(0, 100f - (rpmDifference / (float)bestPossibleConfig * 100f));
+        rpmAccuracyScore = Mathf.Max(0, 100f - (rpmDifference / bestPossibleConfig * 100f));
+
+        Debug.Log("rpmAccurracaysfscore = " + rpmAccuracyScore);
 
         return rpmAccuracyScore;
     } 
@@ -161,7 +162,7 @@ IAmXRObserver<RPMData>
         float alignmentScore = GetAlignmentScore();
 
         //Combine them using weights as aligning is more important than the correct rpm
-        totalScore = rpmScore  + alignmentScore;
+        totalScore = (rpmScore * .3f) + (alignmentScore * .7f);
 
         //Return the rounded score
         return Mathf.Clamp(totalScore, 0f, 100f);
