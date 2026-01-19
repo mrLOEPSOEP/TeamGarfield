@@ -98,11 +98,11 @@ IAmXRObserver<RPMData>
         // Find the rotation script
         DrillRotator rotation = FindFirstObjectByType<DrillRotator>();
         
-        // If the machine isn't even turned on, they get 0 points!
+        /*/ If the machine isn't even turned on, they get 0 points!
         if (rotation != null && !rotation.IsMachineRunning()) 
         {
             return 0f; 
-        }
+        }*/
 
         float rpmDifference = Mathf.Abs(currentRPM - bestPossibleConfig);
         Debug.Log("rpmDiff = " + rpmDifference);
