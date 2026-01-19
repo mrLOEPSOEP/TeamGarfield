@@ -34,7 +34,7 @@ public class RPMManager : XRSubject<RPMData>, IAmXRObserver<AxisData>
         if (sender == topRPMDial)
         {
             //This sets it 0 if it is under .5 and 1 if over ? is compact if and : makes a else
-            topInput = (dialPos > .5f) ? 0 : 1;
+            topInput = (dialPos < .5f) ? 0 : 1;
         }
         else if (sender == bottomRPMDial)
         {
