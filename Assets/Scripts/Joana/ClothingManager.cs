@@ -38,14 +38,7 @@ public class ClothingManager : MonoBehaviour, IAmXRObserver<SafetyData>
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        
     }
 
     public void OnNotify(XRSubject<SafetyData> sender, SafetyData data)
