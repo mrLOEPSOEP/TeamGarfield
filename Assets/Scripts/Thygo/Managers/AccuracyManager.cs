@@ -161,7 +161,7 @@ IAmXRObserver<RPMData>
         float alignmentScore = GetAlignmentScore();
 
         //Combine them using weights as aligning is more important than the correct rpm
-        totalScore = (rpmScore * .3f) + (alignmentScore * .7f);
+        totalScore = rpmScore  + alignmentScore;
 
         //Return the rounded score
         return Mathf.Clamp(totalScore, 0f, 100f);
