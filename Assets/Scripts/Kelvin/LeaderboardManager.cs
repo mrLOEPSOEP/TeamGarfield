@@ -11,7 +11,7 @@ public class LeaderboardManager : MonoBehaviour, IAmObserver<ButtonType>
     [Header("UI references")]
     [SerializeField] private TextMeshPro scoreText;
     [SerializeField] private TextMeshPro titleText;
-    [SerializeField] ButtonType gamemodeSelectScreen;
+    [SerializeField] GameObject gamemodeSelectScreen;
     [SerializeField] TextMeshPro lastScoreText;
 
     [Header("Settings")]

@@ -106726,7 +106726,9 @@ MonoBehaviour:
   materialSocket: {fileID: 1654932494}
   drillBitSocket: {fileID: 1915695719}
   rpmManager: {fileID: 1748355789}
-  drillTarget: {fileID: 0}
+  drillTarget: {fileID: 5528470944347179041}
+  finalRoomTeleport: {fileID: 1671919473}
+  player: {fileID: 918019271}
   maxDistance: 0.03
 --- !u!43 &1594179847
 Mesh:
@@ -112398,6 +112400,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668369884}
   m_CullTransparentMesh: 1
+--- !u!1 &1671919473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1671919474}
+  m_Layer: 0
+  m_Name: FinalRoomTeleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1671919474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671919473}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.19197, y: 1.165, z: -0.624}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1674610997 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d85d99e134a43d047881c4986f88789f, type: 3}
@@ -137279,6 +137312,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LeaderboardManager
   scoreText: {fileID: 253127187}
   titleText: {fileID: 2071907523}
+  gamemodeSelectScreen: {fileID: 1951207980}
+  lastScoreText: {fileID: 297275553}
   maxPlayers: 5
 --- !u!43 &1990137087
 Mesh:
@@ -157606,3 +157641,4 @@ SceneRoots:
   - {fileID: 1543168712}
   - {fileID: 1331539392}
   - {fileID: 1014510697}
+  - {fileID: 1671919474}
