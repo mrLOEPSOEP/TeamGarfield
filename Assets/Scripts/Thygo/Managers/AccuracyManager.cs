@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class AccuracyManager : MonoBehaviour,
+public class AccuracyManager : Subject<AccuracyData>,
 IAmXRObserver<MaterialTypeData>,
 IAmXRObserver<DrillBitData>,
 IAmXRObserver<RPMData>
@@ -18,12 +18,14 @@ IAmXRObserver<RPMData>
     float alignmentScore;
     float totalScore;
     Transform currentActiveTip;
+    
 
     [Header("Subjects to subscribe to")]
     [SerializeField] MaterialSocketSubject materialSocket;
     [SerializeField] DrillBitSocketSubject drillBitSocket;
     [SerializeField] RPMManager rpmManager;
     [SerializeField] DrillTarget drillTarget;
+    [SerializeField] GameObject finalRoomTeleport;
 
     [Header("Values")]
     [Tooltip("Errormargin in distance for how far the drill can be off target")][SerializeField] float maxDistance = .03f;
@@ -159,5 +161,15 @@ IAmXRObserver<RPMData>
 
         //Return the rounded score
         return Mathf.Clamp(totalScore, 0f, 100f);
+    }
+
+    public void OnGameEnd()
+    {
+        float total = CalculateFinalScore();
+        
+        AccuracyData data;
+        data.accuracyScore = total;
+        
+        NotifyObservers(data);
     }
 }

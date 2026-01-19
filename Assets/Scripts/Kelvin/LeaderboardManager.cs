@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Android;
 
 
 public class LeaderboardManager : MonoBehaviour, IAmObserver<ButtonType>
@@ -10,11 +11,14 @@ public class LeaderboardManager : MonoBehaviour, IAmObserver<ButtonType>
     [Header("UI references")]
     [SerializeField] private TextMeshPro scoreText;
     [SerializeField] private TextMeshPro titleText;
+    [SerializeField] ButtonType gamemodeSelectScreen;
+    [SerializeField] TextMeshPro lastScoreText;
 
     [Header("Settings")]
     [SerializeField] private int maxPlayers;
 
     private ButtonType currentActiveMode;
+    bool isDutch;
 
     private void Start()
     {
@@ -30,8 +34,42 @@ public class LeaderboardManager : MonoBehaviour, IAmObserver<ButtonType>
             titleText.text = buttonType.ToString() + " HighScores";
         }
         UpdateDisplay();
+        //Thygo added from this point
+        if (buttonType == ButtonType.Dutch) isDutch = true;
     }
 
+    public void OnNotify(AccuracyData data)
+    {
+        string rankTitle;
+
+        if (isDutch) rankTitle = GetDutchTitle(data.accuracyScore);
+        else rankTitle = GetEnglishTitle(data.accuracyScore);
+
+        SaveNewScore(rankTitle, data.accuracyScore);
+        UpdateResult(rankTitle, data.accuracyScore);
+    }
+
+    void UpdateResult(string title, float score)
+    {
+        if (lastScoreText != null) lastScoreText.text = "Last Result: " + title + " " + score;
+    }
+
+    string GetDutchTitle(float score)
+    {
+        if (score >= 90f) return "Meester";
+        if (score >= 75f) return "Vakman";
+        if (score >= 50f) return "Leerling";
+        return "Amateur";
+    }
+
+    string GetEnglishTitle(float score)
+    {
+        if (score >= 90f) return "Master";
+        if (score >= 75f) return "Expert";
+        if (score >= 50f) return "Apprentice";
+        return "Novice";
+    }
+    //Thygo end
     public void SaveNewScore(string playerName, float score)
     {
         string gameModeType = currentActiveMode.ToString();
