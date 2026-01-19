@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Android;
 
 
-public class LeaderboardManager : MonoBehaviour, IAmObserver<ButtonType>
+public class LeaderboardManager : MonoBehaviour, IAmObserver<ButtonType>, IAmObserver<AccuracyData>
 {
     [Header("UI references")]
     [SerializeField] private TextMeshPro scoreText;
@@ -20,10 +20,22 @@ public class LeaderboardManager : MonoBehaviour, IAmObserver<ButtonType>
     private ButtonType currentActiveMode;
     bool isDutch;
 
+    private void OnEnable()
+    {
+        // Find your subjects and attach this script to them
+        FindObjectOfType<Subject<ButtonType>>()?.AddObserver(this);
+        FindObjectOfType<Subject<AccuracyData>>()?.AddObserver(this); 
+    }
+
+    private void OnDisable()
+    {
+        // Always detach to prevent memory leaks/errors when reloading scenes
+        FindObjectOfType<Subject<ButtonType>>()?.RemoveObserver(this);
+        FindObjectOfType<Subject<AccuracyData>>()?.RemoveObserver(this);
+    }
     private void Start()
     {
         UpdateDisplay();
-
     }
 
     public void OnNotify(ButtonType buttonType)
