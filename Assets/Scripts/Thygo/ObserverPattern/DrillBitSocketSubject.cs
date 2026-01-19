@@ -12,7 +12,7 @@ public class DrillBitSocketSubject : XRSubject<DrillBitData>
 
         if (identity != null)
         {
-            NotifyObservers(this, new DrillBitData{size = identity.bitSize, isPresent = true});
+            NotifyObservers(this, new DrillBitData{size = identity.bitSize, isPresent = true, tipLocation = identity.drillBitTip});
 
             if (identity.bitSize == 30)
             {
