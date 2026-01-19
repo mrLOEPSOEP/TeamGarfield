@@ -25,7 +25,11 @@ IAmXRObserver<RPMData>
     [SerializeField] DrillBitSocketSubject drillBitSocket;
     [SerializeField] RPMManager rpmManager;
     [SerializeField] DrillTarget drillTarget;
+
+    [Header("Teleporting references")]
     [SerializeField] GameObject finalRoomTeleport;
+    [SerializeField] GameObject player;
+
 
     [Header("Values")]
     [Tooltip("Errormargin in distance for how far the drill can be off target")][SerializeField] float maxDistance = .03f;
@@ -169,7 +173,9 @@ IAmXRObserver<RPMData>
         
         AccuracyData data;
         data.accuracyScore = total;
-        
+
+        player.transform.position = finalRoomTeleport.transform.position;
+
         NotifyObservers(data);
     }
 }
