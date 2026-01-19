@@ -10,8 +10,8 @@ public class RPMManager : XRSubject<RPMData>, IAmXRObserver<AxisData>
     [Tooltip("Dial with 3 posible values")][SerializeField] XRSubject<AxisData> bottomRPMDial;
     
 
-    int topInput;
-    int bottomInput;
+    int topInput = 0;
+    int bottomInput = 1;
     [HideInInspector] public int currentRPM;
 
 
