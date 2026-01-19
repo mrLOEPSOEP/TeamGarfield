@@ -108401,7 +108401,7 @@ MonoBehaviour:
   drillTarget: {fileID: 5528470944347179041}
   finalRoomTeleport: {fileID: 1671919473}
   player: {fileID: 918019271}
-  maxDistance: 0.03
+  maxDistance: 0.2
 --- !u!43 &1594179847
 Mesh:
   m_ObjectHideFlags: 0
